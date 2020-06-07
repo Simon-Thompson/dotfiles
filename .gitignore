@@ -1,5 +1,5 @@
 # Ignore everything
-*
+/*
 
 # But not these files...
 !.gitignore
@@ -9,7 +9,8 @@
 !.zshenv
 !.Xresources
 !.tmux.conf
-!*/.config/zsh/aliasrc
-!*/.config/zsh/functionrc
-!*/.config/zsh/antigen.zsh
-!*/.config/zathura/zathurarc
+
+!.config/
+.config/*
+!.config/zsh/
+!.config/zathura/
