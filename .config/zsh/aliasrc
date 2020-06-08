@@ -1,4 +1,3 @@
-# potato test
 alias unreal="~/Programs/UnrealEngine-4.24/Engine/Binaries/Linux/UE4Editor"
 alias todo="vim ~/todo.txt"
 alias kderestart="kquitapp5 plasmashell; kstart5 plasmashell"
