@@ -4,11 +4,6 @@ export VISUAL=/usr/bin/vim
 export KEYTIMEOUT=2
 export PATH="/home/vacuum/.local/bin:$PATH"
 
-# Sources
-source "${HOME}/.config/zsh/aliasrc"
-source "${HOME}/.config/zsh/functionrc"
-source "${HOME}/.cache/wal/colors.sh"
-source "${HOME}/.config/zsh/antigen.zsh"
 
 # Import colorscheme from 'wal'
 (cat "$HOME/.cache/wal/sequences" &)
@@ -17,6 +12,7 @@ source "${HOME}/.config/zsh/antigen.zsh"
 bindkey -v
 
 ## Plugins
+source "${HOME}/.config/zsh/antigen.zsh"
 antigen use oh-my-zsh
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
@@ -25,6 +21,11 @@ antigen bundle mafredri/zsh-async
 antigen theme hohmannr/bubblified 
 antigen bundle jump
 antigen apply
+
+# Sources
+source "${HOME}/.config/zsh/aliasrc"
+source "${HOME}/.config/zsh/functionrc"
+source "${HOME}/.cache/wal/colors.sh"
 
 ## Change cursor with support for inside/outside tmux
 #function _set_cursor() {

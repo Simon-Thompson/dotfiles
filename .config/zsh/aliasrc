@@ -15,7 +15,7 @@ colorflag='--color'
 alias rm="rm -I"
 
 # Basic colored ls
-alias ls="ls ${colorflag} --human-readable --group-directories-first --classify"
+alias ls="ls ${colorflag} --human-readable --group-directories-first -1 --classify"
 
 # Some shorthand launching
 alias t="tmux"
