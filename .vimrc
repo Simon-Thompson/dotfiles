@@ -226,3 +226,19 @@ autocmd BufEnter *
     \   let t:startify_new_tab = 1 |
     \   Startify |
     \ endif
+
+" fswitch config
+augroup mycppfiles
+    au!
+    au BufEnter *.cpp let b:fswitchdst = 'h,hpp' | let b:fswitchlocs = 'reg:|Private|Public/**|'
+    au BufEnter *.h let b:fswitchdst = 'cpp,cxx,C' | let b:fswitchlocs = 'reg:|Public|Private/**|'
+augroup END
+nmap <silent> <Leader>of :FSHere<cr>
+nmap <silent> <Leader>ol :FSRight<cr>
+nmap <silent> <Leader>oL :FSSplitRight<cr>
+nmap <silent> <Leader>oh :FSLeft<cr>
+nmap <silent> <Leader>oH :FSSplitLeft<cr>
+nmap <silent> <Leader>ok :FSAbove<cr>
+nmap <silent> <Leader>oK :FSSplitAbove<cr>
+nmap <silent> <Leader>oj :FSBelow<cr>
+nmap <silent> <Leader>oJ :FSSplitBelow<cr>

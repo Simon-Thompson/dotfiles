@@ -23,6 +23,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle mafredri/zsh-async
 antigen theme hohmannr/bubblified 
+antigen bundle jump
 antigen apply
 
 ## Change cursor with support for inside/outside tmux

@@ -10,6 +10,9 @@ sudo pacman -S --needed --noconfirm python procps feh imagemagick python-pywal
 # PDF viewing
 sudo pacman -S --needed --noconfirm zathura
 
+# tmux plugins
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 ### Dotfiles ###
 mkdir -p ~/.config
 mkdir -p ~/.config/zsh
