@@ -19,5 +19,9 @@ mkdir -p ~/.config/zsh
 mkdir -p ~/.config/zathura
 
 mv -t ~/ .vimrc .zshrc .zshenv .Xresources .tmux.conf
-mv -t ~/.config/zsh aliasrc antigen.zsh functionrc
-mv ~/.config/zathura zathurarc
+ln -s ~/aliasrc ~/.config/zsh/aliasrc 
+ln -s ~/antigen.zsh ~/.config/zsh/antigen.zsh
+ln -s ~/functionrc ~/.config/zsh/functionrc
+ln -s ~/zathurarc ~/.config/zathura/zathurarc
+
+echo "Install complete!\nRemember to add shortcuts for urxvt {M-Enter} and Scripts/rofi.sh {M-d}"

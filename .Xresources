@@ -18,19 +18,3 @@ URxvt.cursorBlink:          0
 ! urxvt scrolling setup - up and down 10 lines
 URxvt.keysym.Shift-Up:      command:\033]720;10\007
 URxvt.keysym.Shift-Down:    command:\033]721;10\007
-
-! rofi setup
-rofi.color-enabled:         true
-rofi.separator-style:       solid
-rofi.font:                  FONT SIZE
-rofi.bw:                    2
-rofi.columns:               1
-rofi.yoffset:               0
-rofi.fake-transparency:     false
-rofi.hide-scrollbar:        true
-!rofi.opacity:               90
-
-rofi.location:              0
-rofi.width:                 30
-rofi.lines:                 10
-rofi.fixed-num-lines:       true

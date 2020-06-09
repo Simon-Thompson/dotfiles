@@ -9,8 +9,7 @@
 !.zshenv
 !.Xresources
 !.tmux.conf
-
-!.config/
-.config/*
-!.config/zsh/
-!.config/zathura/
+!aliasrc
+!antigen.zsh
+!functionrc
+!zathurarc

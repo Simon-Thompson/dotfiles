@@ -120,6 +120,8 @@ Plug 'tpope/vim-fugitive'
 " File browsing
 Plug 'preservim/nerdtree'
 Plug 'mhinz/vim-startify'
+" Markdown
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 " manually installed its updates are huge
 " Plug '~/.vim/plugged/YouCompleteMe'
 
@@ -242,3 +244,6 @@ nmap <silent> <Leader>ok :FSAbove<cr>
 nmap <silent> <Leader>oK :FSSplitAbove<cr>
 nmap <silent> <Leader>oj :FSBelow<cr>
 nmap <silent> <Leader>oJ :FSSplitBelow<cr>
+
+" Markdown preview settings
+nmap <C-p> <Plug>MarkdownPreviewToggle
