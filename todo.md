@@ -1,9 +1,6 @@
 ### Programs ###
 * Research IRC/multiprotocol chat client for fb messenger & discord (bitlbee + weechat or rambox?)
 
-### Bugs ###
-* Fix Ctrl-Arrow Keys causing weird behaviour (caused by uxrvt? or tmux?)
-
 ### Productivity ###
 * Set up thunderbird notifications and check on startup
 
