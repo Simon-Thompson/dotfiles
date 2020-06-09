@@ -44,8 +44,9 @@ augroup numbertoggle
   autocmd BufLeave,FocusLost,InsertEnter   * set rnu!
 augroup END
 
-" Use comma as leader
-let g:mapleader = ','
+" Use Space as leader
+let g:mapleader = "\<Space>""
+let g:maplocalleader = "\<Space>"
 
 " Search for visually selected text
 vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
@@ -89,6 +90,7 @@ let g:coc_global_extensions = [
     \ 'coc-json',
     \ 'coc-python',
     \ 'coc-pairs',
+    \ 'coc-vimtex'
 \ ]
 
 " PLugins will be downloaded under the specified directory.
@@ -120,7 +122,8 @@ Plug 'tpope/vim-fugitive'
 " File browsing
 Plug 'preservim/nerdtree'
 Plug 'mhinz/vim-startify'
-" Markdown
+" Latex and Markdown
+Plug 'lervag/vimtex'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 " manually installed its updates are huge
 " Plug '~/.vim/plugged/YouCompleteMe'
@@ -245,5 +248,8 @@ nmap <silent> <Leader>oK :FSSplitAbove<cr>
 nmap <silent> <Leader>oj :FSBelow<cr>
 nmap <silent> <Leader>oJ :FSSplitBelow<cr>
 
-" Markdown preview settings
+" Markdown preview config
 nmap <C-p> <Plug>MarkdownPreviewToggle
+
+" vimtex config
+let g:vimtex_view_method = 'zathura'

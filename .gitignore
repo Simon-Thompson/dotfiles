@@ -4,6 +4,7 @@
 # But not these files...
 !.gitignore
 !install.sh
+# Configs
 !.vimrc
 !.zshrc
 !.zshenv
@@ -13,5 +14,8 @@
 !antigen.zsh
 !functionrc
 !zathurarc
+# Scripts
 !wal.sh
 !rofi.sh
+# Misc
+!shortcuts.md

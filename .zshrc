@@ -60,4 +60,4 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^h' backward-delete-char
 
 neofetch
-echo "$(cat $HOME/todo.txt)"
+echo "$(cat $HOME/todo.md)"
