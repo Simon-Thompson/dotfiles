@@ -1,9 +1,7 @@
 ### Programs ###
-* Install latex
 * Research IRC/multiprotocol chat client for fb messenger & discord (bitlbee + weechat or rambox?)
 
 ### Bugs ###
-* Fix copy paste in vim
 * Fix Ctrl-Arrow Keys causing weird behaviour (caused by uxrvt? or tmux?)
 
 ### Productivity ###

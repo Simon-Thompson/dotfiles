@@ -1,6 +1,6 @@
 set encoding=utf-8
 scriptencoding utf-8
-set clipboard+=unnamed  " system clipboard
+set clipboard=unnamedplus  " system clipboard
 set hidden              " hide buffers instead of closing them
 set noerrorbells
 set nobackup

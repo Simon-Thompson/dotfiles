@@ -4,7 +4,7 @@
 # Shell
 sudo pacman -S --needed --noconfirm zsh neofetch ranger
 # Editor
-sudo pacman -S --needed --noconfirm vim tmux
+sudo pacman -S --needed --noconfirm gvim tmux
 # Wallpaper - wal & dependencies
 sudo pacman -S --needed --noconfirm python procps feh imagemagick python-pywal
 # PDF viewing
