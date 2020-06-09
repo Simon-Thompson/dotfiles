@@ -15,7 +15,7 @@ hlfg=$color0
 rofi -show run \
     -lines 6 \
     -eh 2 \
-    -width 100 \
+    -width 50 \
     -font "Hack Nerd Font Mono 14" \
     -color-window "$bg, $fg, $border" \
     -color-normal "$bg, $fg, $bgalt, $hlbg, $hlfg" \
