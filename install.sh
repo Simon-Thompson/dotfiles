@@ -2,13 +2,15 @@
 
 ### Programs ###
 # Shell
-sudo pacman -S --needed --noconfirm zsh neofetch ranger
+sudo pacman -S --needed --noconfirm zsh rxvt-unicode neofetch ranger nodejs
 # Editor
 sudo pacman -S --needed --noconfirm gvim tmux
 # Wallpaper - wal & dependencies
 sudo pacman -S --needed --noconfirm python procps feh imagemagick python-pywal
 # PDF viewing
 sudo pacman -S --needed --noconfirm zathura
+# launcher
+sudo pacman -S --needed --noconfirm rofi
 
 # tmux plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -28,4 +30,9 @@ mkdir -p ~/Scripts
 ln -s ~/wal.sh ~/Scripts/wal.sh
 ln -s ~/rofi.sh ~/Scripts/rofi.sh
 
-echo "Install complete!\nRemember to add shortcuts for urxvt {M-Enter} and Scripts/rofi.sh {M-d}\nand add Scripts/wal.sh to .xinitrc"
+# Switch to zsh
+chsh -s /bin/zsh
+# Install placeholder theme
+wal --theme sexy-numixdarkest
+
+printf "Install complete!\nRemember to add shortcuts for urxvt {M-Enter} and Scripts/rofi.sh {M-d}\nand add Scripts/wal.sh to .xinitrc"
