@@ -35,6 +35,10 @@ chsh -s /bin/zsh
 # Install placeholder theme
 wal --theme sexy-numixdarkest
 
+# Setup git credential cache
+git config --global credential.helper cache
+git config --global credential.helper 'cache --timeout=3600'
+
 # Install Hack Nerd Font
 git clone https://github.com/ryanoasis/nerd-fonts.git
 cd nerd-fonts
