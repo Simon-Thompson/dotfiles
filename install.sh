@@ -2,7 +2,7 @@
 
 ### Programs ###
 # Shell
-sudo pacman -S --needed --noconfirm zsh rxvt-unicode neofetch ranger nodejs
+sudo pacman -S --needed --noconfirm zsh rxvt-unicode neofetch ranger nodejs npm
 # Editor
 sudo pacman -S --needed --noconfirm gvim tmux
 # Wallpaper - wal & dependencies
@@ -34,5 +34,12 @@ ln -s ~/rofi.sh ~/Scripts/rofi.sh
 chsh -s /bin/zsh
 # Install placeholder theme
 wal --theme sexy-numixdarkest
+
+# Install Hack Nerd Font
+git clone https://github.com/ryanoasis/nerd-fonts.git
+cd nerd-fonts
+./install.sh Hack
+cd ..
+rm -rf nerd-fonts
 
 printf "Install complete!\nRemember to add shortcuts for urxvt {M-Enter} and Scripts/rofi.sh {M-d}\nand add Scripts/wal.sh to .xinitrc"
