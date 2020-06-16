@@ -1,9 +1,6 @@
 ### Programs ###
 * Research IRC/multiprotocol chat client for fb messenger & discord (bitlbee + weechat or rambox?)
 
-### Productivity ###
-* Set up thunderbird notifications and check on startup
-
 ### Prettify ###
 * Customize KDE Plasma
 
