@@ -11,6 +11,10 @@ sudo pacman -S --needed --noconfirm python procps feh imagemagick python-pywal
 sudo pacman -S --needed --noconfirm zathura
 # launcher
 sudo pacman -S --needed --noconfirm rofi
+# AUR package manager
+sudo pacman -S --needed --noconfirm yay
+# Note-taking
+yay -S --noconfirm joplin
 
 # tmux plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
