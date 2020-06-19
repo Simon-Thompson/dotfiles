@@ -102,12 +102,15 @@ Plug 'junegunn/goyo.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'dylanaraps/wal.vim'
 Plug 'mengelbrecht/lightline-bufferline'
+Plug 'ryanoasis/vim-devicons'
 " Completion and syntax
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Editing and usability
 Plug 'matze/vim-move'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-repeat'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'sjl/gundo.vim'
 Plug 'gcmt/wildfire.vim'
@@ -116,8 +119,10 @@ Plug 'derekwyatt/vim-fswitch'
 Plug 'Yggdroot/indentLine'
 Plug 'preservim/nerdcommenter'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'psliwka/vim-smoothie'
+Plug 'markonm/traces.vim'
 " Git for vim
-Plug 'mhinz/vim-signify'
+Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 " File browsing
 Plug 'preservim/nerdtree'

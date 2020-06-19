@@ -1,4 +1,5 @@
 #!/bin/zsh
+sleep 5
 wal -R -a 95
 
 qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript '
