@@ -51,3 +51,8 @@ cd ..
 rm -rf nerd-fonts
 
 printf "Install complete!\nRemember to add shortcuts for urxvt {M-Enter} and Scripts/rofi.sh {M-d}\nand add Scripts/wal.sh to .xinitrc"
+
+# Useful commands that aren't included in this install
+
+### Mount NTFS drive for Steam Play in /etc/fstab ###
+# UUID=<your UID here>			  /run/media/vacuum/<whatever folder>		 ntfs-3g	 defaults,exec,uid=1000,gid=1000 0 2

@@ -15,7 +15,6 @@
 * ultisnips - ultimate snippet solution https://github.com/SirVer/ultisnips
 * vim-move - moves selections up and down https://github.com/matze/vim-move
 * vim-endwise - autocompletes structures like if...endif https://github.com/tpope/vim-endwise
-* gundo - visualize undo tree https://docs.stevelosh.com/gundo.vim/
 * wildfire - quick select inner text objects https://github.com/gcmt/wildfire.vim
 * tagbar - tags on the go https://github.com/majutsushi/tagbar
 * indentLine - adds | to visualize indents https://github.com/Yggdroot/indentLine
@@ -47,22 +46,20 @@
 * ctrsf - fast search and edit (should use with vim-multiline) https://github.com/dyng/ctrlsf.vim
 * minibufexpl.vim - mark buffers like in GUI editors (doesn't konsole do this?) https://github.com/fholgado/minibufexpl.vim
 
-## Not implemented
+## Disabled
+* gundo - visualize undo tree https://docs.stevelosh.com/gundo.vim/
 * YouCompleteMe - code completion https://github.com/ycm-core/YouCompleteMe
     * doesn't work with Unreal - would take more time to implement
 
 # Hotkeys
 #### Toggle NerdTree
-- \<Ctrl-n>
+- \<F5>
 
 #### Turn on Markdown Preview
 - \<Ctrl-p>
 
 #### Toggle Goyo Focus Mode
 - \<F1> 
-
-#### Toggle Gundo
-- \<F5> 
 
 #### Toggle Tagbar 
 - \<F8> 

@@ -1,6 +1,3 @@
-### Install ###
-* Download Nerd font automatically
-
 ### Programs ###
 * Research IRC/multiprotocol chat client for fb messenger & discord (bitlbee + weechat or rambox?)
 

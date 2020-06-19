@@ -112,7 +112,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-repeat'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'sjl/gundo.vim'
 Plug 'gcmt/wildfire.vim'
 Plug 'majutsushi/tagbar'
 Plug 'derekwyatt/vim-fswitch'
@@ -130,6 +129,8 @@ Plug 'mhinz/vim-startify'
 " Latex and Markdown
 Plug 'lervag/vimtex'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+" Disabled -- not used
+" Plug 'sjl/gundo.vim'
 " manually installed its updates are huge
 " Plug '~/.vim/plugged/YouCompleteMe'
 
@@ -162,12 +163,6 @@ let g:UltiSnipsJumpForwardTrigger = '<C-j>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-
-" gundo.vim keymap
-nnoremap <F9> :GundoToggle<CR>
-if has('python3')
-	let g:gundo_prefer_python3 = 1
-endif
 
 " tagbar config
 nmap <F8> :TagbarToggle<CR>
