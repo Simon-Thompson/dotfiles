@@ -25,10 +25,12 @@ mv -t ~/ .vimrc .zshrc .zshenv .Xresources .tmux.conf
 mkdir -p ~/.config
 mkdir -p ~/.config/zsh
 mkdir -p ~/.config/zathura
+mkdir -p ~/.config/ranger
 ln -s ~/aliasrc ~/.config/zsh/aliasrc 
 ln -s ~/antigen.zsh ~/.config/zsh/antigen.zsh
 ln -s ~/functionrc ~/.config/zsh/functionrc
 ln -s ~/zathurarc ~/.config/zathura/zathurarc
+ln -s ~/rc.conf ~/.config/ranger/rc.conf
 # Scripts
 mkdir -p ~/Scripts
 ln -s ~/wal.sh ~/Scripts/wal.sh
