@@ -90,7 +90,8 @@ let g:coc_global_extensions = [
     \ 'coc-json',
     \ 'coc-python',
     \ 'coc-pairs',
-    \ 'coc-vimtex'
+    \ 'coc-vimtex',
+    \ 'coc-git'
 \ ]
 
 " PLugins will be downloaded under the specified directory.
@@ -99,12 +100,12 @@ call plug#begin('~/.vim/plugged')
 " Declare the list of plugins.
 " Theming
 Plug 'junegunn/goyo.vim'
-Plug 'itchyny/lightline.vim'
 Plug 'dylanaraps/wal.vim'
-Plug 'mengelbrecht/lightline-bufferline'
 Plug 'ryanoasis/vim-devicons'
+Plug 'liuchengxu/eleline.vim'
 " Completion and syntax
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'editorconfig/editorconfig-vim'
 " Editing and usability
 Plug 'matze/vim-move'
 Plug 'tpope/vim-endwise'
@@ -113,15 +114,15 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-repeat'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'gcmt/wildfire.vim'
-Plug 'majutsushi/tagbar'
 Plug 'derekwyatt/vim-fswitch'
 Plug 'Yggdroot/indentLine'
 Plug 'preservim/nerdcommenter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'psliwka/vim-smoothie'
 Plug 'markonm/traces.vim'
+Plug 'junegunn/vim-peekaboo'
+Plug 'liuchengxu/vim-which-key'
 " Git for vim
-Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 " File browsing
 Plug 'preservim/nerdtree'
@@ -131,6 +132,7 @@ Plug 'lervag/vimtex'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 " Disabled -- not used
 " Plug 'sjl/gundo.vim'
+" Plug 'airblade/vim-gitgutter'
 " manually installed its updates are huge
 " Plug '~/.vim/plugged/YouCompleteMe'
 
@@ -145,7 +147,7 @@ colorscheme wal
 " let g:ycm_clangd_binary_path = "~/Programs/clangd"
 
 " vim-move config
-" see https://github/com/matze/vim-move/issues/15 for ESC fix if needed
+" see https://github.com/matze/vim-move/issues/15 for ESC fix if needed
 let c='a'
 while c <= 'z'
 	exec "set <A-".c.">=\e".c
@@ -163,9 +165,6 @@ let g:UltiSnipsJumpForwardTrigger = '<C-j>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-
-" tagbar config
-nmap <F8> :TagbarToggle<CR>
 
 " Fugitive
 nmap gs :vertical Gstatus<CR>
@@ -198,31 +197,10 @@ nnoremap <F1> :Goyo<CR>
 let g:goyo_width = 120
 let g:goyo_height = 85
 
-" Lightline config
+" eleline config
 set laststatus=2
 set noshowmode
-let g:lightline = {
-    \ 'active': {
-    \     'left': [ [ 'mode', 'paste' ],
-    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-    \ },
-    \ 'tabline': {
-    \     'left': [ ['buffers'] ],
-    \     'right': [ ['close'] ]
-    \ },
-    \ 'component_expand': {
-    \     'buffers': 'lightline#bufferline#buffers'
-    \ },
-    \ 'component_type': {
-    \     'buffers': 'tabsel'
-    \ },
-    \ 'component_function': {
-    \     'gitbranch': 'FugitiveHead'
-    \ },
-\ }
-if has ('gui_running')
-    set guioptions-=e
-endif
+let g:eleline_powerline_fonts=1
 
 " vim-startify config
 " Patch to work with Goyo
@@ -253,3 +231,10 @@ nmap <C-p> <Plug>MarkdownPreviewToggle
 
 " vimtex config
 let g:vimtex_view_method = 'zathura'
+
+" editorconfig config
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
+" WhichKey config
+nnoremap <silent> <leader>  :<c-u>WhichKey '<Space>'<CR>
+autocmd FileType which_key highlight WhichKeyFloating guibg=black ctermbg=black

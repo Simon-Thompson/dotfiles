@@ -1,8 +1,10 @@
 #! /bin/bash
 
 ### Programs ###
+# AUR package manager
+sudo pacman -S --needed --noconfirm yay
 # Shell
-sudo pacman -S --needed --noconfirm zsh rxvt-unicode neofetch ranger nodejs npm
+sudo pacman -S --needed --noconfirm zsh rxvt-unicode neofetch ranger nodejs npm w3m
 # Editor
 sudo pacman -S --needed --noconfirm gvim tmux
 # Wallpaper - wal & dependencies
@@ -11,8 +13,6 @@ sudo pacman -S --needed --noconfirm python procps feh imagemagick python-pywal
 sudo pacman -S --needed --noconfirm zathura
 # launcher
 sudo pacman -S --needed --noconfirm rofi
-# AUR package manager
-sudo pacman -S --needed --noconfirm yay
 # Note-taking
 yay -S --noconfirm joplin
 
