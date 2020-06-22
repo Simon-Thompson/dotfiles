@@ -10,6 +10,9 @@
     - coc-json
     - coc-python
     - coc-pairs
+    - coc-vimtex
+    - coc-git (replaces gitgutter)
+    - coc-clangd
 - editorconfig - configures vim from a .editorconfig file. See https://github.com/editorconfig/editorconfig-vim and https://editorconfig.org/ for more
 
 ### Editing and Usability

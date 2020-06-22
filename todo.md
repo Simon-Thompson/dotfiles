@@ -5,10 +5,8 @@
 * Customize KDE Plasma
 
 ### Vim ###
-* Gutentags instead of ctags/tagbar?
-* Configure ctags with tagbar for use with git hooks and c++
+* Remove fswitch and use :CocCommand clangd.switchSourceHeader (see https://github.com/clangd/coc-clangd)
 * Learn about folding
 * Learn about vim autocommands
 * Learn about vim buffers
-* Read more tags docs
 * Read more ultisnips docs

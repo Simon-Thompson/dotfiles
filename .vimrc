@@ -91,7 +91,8 @@ let g:coc_global_extensions = [
     \ 'coc-python',
     \ 'coc-pairs',
     \ 'coc-vimtex',
-    \ 'coc-git'
+    \ 'coc-git',
+    \ 'coc-clangd'
 \ ]
 
 " PLugins will be downloaded under the specified directory.
@@ -156,6 +157,14 @@ while c <= 'z'
 endw
 set timeout ttimeoutlen=50
 
+" Coc config
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
+
 " Ultisnips trigger config
 "  - Expand turned off because coc is used for snippets
 "  - ctrl-j to go to next tabstop
@@ -199,7 +208,6 @@ let g:goyo_height = 85
 
 " eleline config
 set laststatus=2
-set noshowmode
 let g:eleline_powerline_fonts=1
 
 " vim-startify config
