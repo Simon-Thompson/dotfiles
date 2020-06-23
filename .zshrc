@@ -4,7 +4,6 @@ export VISUAL=/usr/bin/vim
 export KEYTIMEOUT=2
 export PATH="/home/vacuum/.local/bin:$PATH"
 
-
 # Import colorscheme from 'wal'
 (cat "$HOME/.cache/wal/sequences" &)
 

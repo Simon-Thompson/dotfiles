@@ -5,7 +5,7 @@
 * Customize KDE Plasma
 
 ### Vim ###
-* Remove fswitch and use :CocCommand clangd.switchSourceHeader (see https://github.com/clangd/coc-clangd)
+* Figure out how to get a "project" to work
 * Learn about folding
 * Learn about vim autocommands
 * Learn about vim buffers

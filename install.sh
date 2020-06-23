@@ -4,10 +4,10 @@
 # AUR package manager
 sudo pacman -S --needed --noconfirm yay
 # Shell
-sudo pacman -S --needed --noconfirm zsh rxvt-unicode neofetch ranger nodejs npm w3m clang
+sudo pacman -S --needed --noconfirm zsh alacritty neofetch ranger nodejs npm w3m clang
 # Editor
-sudo pacman -S --needed --noconfirm gvim tmux
-# Wallpaper - wal & dependencies
+sudo pacman -S --needed --noconfirm gvim tmux fzf ripgrep
+# Theming
 sudo pacman -S --needed --noconfirm python procps feh imagemagick python-pywal
 # PDF viewing
 sudo pacman -S --needed --noconfirm zathura
@@ -39,7 +39,7 @@ ln -s ~/rofi.sh ~/Scripts/rofi.sh
 # Switch to zsh
 chsh -s /bin/zsh
 # Install placeholder theme
-wal --theme sexy-numixdarkest
+wal --theme base16-dracula -a 96
 
 # Setup git credential cache
 git config --global credential.helper cache
@@ -52,7 +52,10 @@ cd nerd-fonts
 cd ..
 rm -rf nerd-fonts
 
-printf "Install complete!\nRemember to add shortcuts for urxvt {M-Enter} and Scripts/rofi.sh {M-d}\nand add Scripts/wal.sh to .xinitrc"
+# Make fzf use ripgrep
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
+
+printf "Install complete!\nRemember to add shortcuts for alacritty {M-Enter} and Scripts/rofi.sh {M-d}\nand add Scripts/wal.sh to .xinitrc"
 
 # !Important
 # Open vim and run :PlugInstall to install all its plugins. Coc should download all of its plugins when vim is opened as well

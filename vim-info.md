@@ -5,14 +5,6 @@
 - vim-devicons - adds icons from Nerd Fonts https://github.com/ryanoasis/vim-devicons
 - eleline.vim - status bar with support for most of my plugins https://github.com/liuchengxu/eleline.vim
 ### Completion & Syntax
-- coc - LSP the way you want it
-    - coc-ultisnips
-    - coc-json
-    - coc-python
-    - coc-pairs
-    - coc-vimtex
-    - coc-git (replaces gitgutter)
-    - coc-clangd
 - editorconfig - configures vim from a .editorconfig file. See https://github.com/editorconfig/editorconfig-vim and https://editorconfig.org/ for more
 
 ### Editing and Usability
@@ -33,6 +25,7 @@
 - WhickKey - visual helper showing commands after hitting a starting key https://github.com/liuchengxu/vim-which-key/
 ### Git for Vim
 - vim-fugitive - git directly inside the vim file https://github.com/tpope/vim-fugitive
+- vim-gitgutter - shows file changes for git https://github.com/airblade/vim-gitgutter
 ### File Browsing
 - nerdtree - visual file hierarchy https://github.com/preservim/nerdtree
 - vim-startify - start page and maintains sessions https://github.com/mhinz/vim-startify
@@ -51,12 +44,13 @@
 - minibufexpl.vim - mark buffers like in GUI editors (doesn't konsole do this?) https://github.com/fholgado/minibufexpl.vim
 
 ## Disabled
-- vim-gitgutter - shows file changes for git https://github.com/airblade/vim-gitgutter
-- gundo - visualize undo tree https://docs.stevelosh.com/gundo.vim/
-- YouCompleteMe - code completion https://github.com/ycm-core/YouCompleteMe
-    - doesn't work with Unreal - would take more time to implement
 
-# Hotkeys
+# Hotkeys / Reminders
+
+#### Generate new tags file for project:
+(From the command line)
+- ctags -R -f ./.git/tags .
+
 #### Toggle NerdTree
 - \<F5>
 

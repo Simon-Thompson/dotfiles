@@ -8,13 +8,14 @@
 !.vimrc
 !.zshrc
 !.zshenv
-!.Xresources
 !.tmux.conf
 !aliasrc
 !antigen.zsh
 !functionrc
 !zathurarc
 !rc.conf
+!.Xresources
+!.alacritty.yml
 # Scripts
 !wal.sh
 !rofi.sh

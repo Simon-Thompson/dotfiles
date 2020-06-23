@@ -13,6 +13,11 @@ set nu rnu
 set lazyredraw
 set updatetime=300      " Longer update times (default is 4000ms) leads to delays and poor ux
 set cmdheight=2         " Give more space for displaying messages
+if exists('+termguicolors')
+  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 
 " Put plugins and dictionaries in this dir (also on Windows)
 let vimDir = '$HOME/.vim'
@@ -84,28 +89,17 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" Coc extensions
-let g:coc_global_extensions = [
-    \ 'coc-ultisnips',
-    \ 'coc-json',
-    \ 'coc-python',
-    \ 'coc-pairs',
-    \ 'coc-vimtex',
-    \ 'coc-git',
-    \ 'coc-clangd'
-\ ]
-
 " PLugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins.
 " Theming
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'junegunn/goyo.vim'
-Plug 'dylanaraps/wal.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'liuchengxu/eleline.vim'
 " Completion and syntax
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'editorconfig/editorconfig-vim'
 " Editing and usability
 Plug 'matze/vim-move'
@@ -122,9 +116,11 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'psliwka/vim-smoothie'
 Plug 'markonm/traces.vim'
 Plug 'junegunn/vim-peekaboo'
+Plug 'junegunn/fzf.vim'
 Plug 'liuchengxu/vim-which-key'
 " Git for vim
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 " File browsing
 Plug 'preservim/nerdtree'
 Plug 'mhinz/vim-startify'
@@ -132,20 +128,14 @@ Plug 'mhinz/vim-startify'
 Plug 'lervag/vimtex'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 " Disabled -- not used
-" Plug 'sjl/gundo.vim'
-" Plug 'airblade/vim-gitgutter'
-" manually installed its updates are huge
-" Plug '~/.vim/plugged/YouCompleteMe'
+" Plug 'dylanaraps/wal.vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
 " Need to be called after plugins are loaded
-colorscheme wal
-
-" YouCompleteMe config 
-" clangd path wasn't found, would need to fix this
-" let g:ycm_clangd_binary_path = "~/Programs/clangd"
+colorscheme dracula
+hi Normal ctermbg=NONE guibg=NONE
 
 " vim-move config
 " see https://github.com/matze/vim-move/issues/15 for ESC fix if needed
@@ -157,19 +147,8 @@ while c <= 'z'
 endw
 set timeout ttimeoutlen=50
 
-" Coc config
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-" Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
-
 " Ultisnips trigger config
-"  - Expand turned off because coc is used for snippets
-"  - ctrl-j to go to next tabstop
-"  - ctrl-k to go to previous tabstop
-let g:UltiSnipsExpandTrigger = '<nop>'
+let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<C-j>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 " If you want :UltiSnipsEdit to split your window.
@@ -246,3 +225,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " WhichKey config
 nnoremap <silent> <leader>  :<c-u>WhichKey '<Space>'<CR>
 autocmd FileType which_key highlight WhichKeyFloating guibg=black ctermbg=black
+
+" Fzf config
+nnoremap <C-f> :Files<Cr>
+nnoremap <C-g> :Rg<Cr>

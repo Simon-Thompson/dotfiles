@@ -18,6 +18,7 @@ alias rm="rm -I"
 alias ls="ls ${colorflag} --human-readable --group-directories-first -1 --classify"
 
 # Some shorthand launching
+alias tmux='TERM=screen-256color tmux'
 alias t="tmux"
 alias ta="tmux attach-session"
 
