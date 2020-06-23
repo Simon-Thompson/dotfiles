@@ -99,7 +99,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'liuchengxu/eleline.vim'
 " Completion and syntax
-Plug 'ludovicchabant/vim-gutentags'
+Plug 'ludovicchabant/vim-gutentags', { 'commit': '31c0ead' }
 Plug 'editorconfig/editorconfig-vim'
 " Editing and usability
 Plug 'matze/vim-move'
