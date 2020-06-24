@@ -16,6 +16,7 @@
 !rc.conf
 !.Xresources
 !.alacritty.yml
+!.neofetchconf
 # Scripts
 !wal.sh
 !rofi.sh

@@ -4,7 +4,7 @@
 # AUR package manager
 sudo pacman -S --needed --noconfirm yay
 # Shell
-sudo pacman -S --needed --noconfirm zsh alacritty neofetch ranger nodejs npm w3m clang
+sudo pacman -S --needed --noconfirm zsh alacritty neofetch ranger nodejs npm w3m clang ctags
 # Editor
 sudo pacman -S --needed --noconfirm gvim tmux fzf ripgrep
 # Theming
@@ -46,11 +46,16 @@ git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=3600'
 
 # Install Hack Nerd Font
-git clone https://github.com/ryanoasis/nerd-fonts.git
-cd nerd-fonts
-./install.sh Hack
-cd ..
-rm -rf nerd-fonts
+if fc-list | rg 'Hack Nerd Font'
+then
+    git clone https://github.com/ryanoasis/nerd-fonts.git
+    cd nerd-fonts
+    ./install.sh Hack
+    cd ..
+    rm -rf nerd-fonts
+else
+    printf "Don't need to reinstall Hack Nerd Font"
+fi
 
 # Make fzf use ripgrep
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
