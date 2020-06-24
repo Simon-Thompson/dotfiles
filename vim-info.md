@@ -1,5 +1,6 @@
 # Installed plugins
 ### Theming
+- dracula - colorscheme
 - goyo - focus mode - https://github.com/junegunn/goyo.vim
 - wal.vim - sets the pywal theme on vim https://github.com/dylanaraps/wal.vim
 - vim-devicons - adds icons from Nerd Fonts https://github.com/ryanoasis/vim-devicons
@@ -23,6 +24,7 @@
 - traces.vim - highlights substitution text https://github.com/markonm/traces.vim
 - vim-peekaboo - shows registers in side preview when hiting " or @ https://github.com/junegunn/vim-peekaboo
 - WhickKey - visual helper showing commands after hitting a starting key https://github.com/liuchengxu/vim-which-key/
+- vim-rooter - auto change the working directory to the project root
 ### Git for Vim
 - vim-fugitive - git directly inside the vim file https://github.com/tpope/vim-fugitive
 - vim-gitgutter - shows file changes for git https://github.com/airblade/vim-gitgutter
@@ -46,6 +48,10 @@
 ## Disabled
 
 # Hotkeys / Reminders
+
+#### Startify session commands
+- \<leader>ss (:SSave save current session)
+- \<leader>sx (:SClose close current session)
 
 #### Generate new tags file for project:
 (From the command line)

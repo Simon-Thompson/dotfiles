@@ -118,6 +118,7 @@ Plug 'markonm/traces.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'junegunn/fzf.vim'
 Plug 'liuchengxu/vim-which-key'
+Plug 'airblade/vim-rooter'
 " Git for vim
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -190,6 +191,14 @@ set laststatus=2
 let g:eleline_powerline_fonts=1
 
 " vim-startify config
+nnoremap <leader>ss :SSave<CR>
+nnoremap <leader>sx :SClose<CR>
+let g:startify_files_number = 18
+let g:startify_session_persistence = 1
+let g:startify_lists = [
+    \ { 'type': 'dir',          'header': ['Recent files'] },
+    \ { 'type': 'sessions',     'header': ['Saved sessions'] },
+    \ ]
 " Patch to work with Goyo
 autocmd BufEnter *
     \ if !exists('t:startify_new_tab') && empty(expand('%')) && !exists('t:goyo_master') | 
@@ -224,8 +233,11 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 " WhichKey config
 nnoremap <silent> <leader>  :<c-u>WhichKey '<Space>'<CR>
-autocmd FileType which_key highlight WhichKeyFloating guibg=black ctermbg=black
 
 " Fzf config
-nnoremap <C-f> :Files<Cr>
-nnoremap <C-g> :Rg<Cr>
+nnoremap <leader>ff :Files<Cr>
+nnoremap <leader>fg :Rg<Cr>
+
+" vim-rooter config
+let g:rooter_targets='*.h,*.cpp'
+let g:rooter_patterns=['Source/']
