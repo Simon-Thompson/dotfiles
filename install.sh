@@ -14,7 +14,7 @@ sudo pacman -S --needed --noconfirm zathura
 # launcher
 sudo pacman -S --needed --noconfirm rofi
 # Note-taking
-yay -S --noconfirm joplin
+yay -S --needed --noconfirm joplin
 
 # tmux plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -26,11 +26,13 @@ mkdir -p ~/.config
 mkdir -p ~/.config/zsh
 mkdir -p ~/.config/zathura
 mkdir -p ~/.config/ranger
+mkdir -p ~/.config/neofetch
 ln -s ~/aliasrc ~/.config/zsh/aliasrc 
 ln -s ~/antigen.zsh ~/.config/zsh/antigen.zsh
 ln -s ~/functionrc ~/.config/zsh/functionrc
 ln -s ~/zathurarc ~/.config/zathura/zathurarc
 ln -s ~/rc.conf ~/.config/ranger/rc.conf
+ln -s ~/.neofetchconf ~/.config/neofetch/config.conf
 # Scripts
 mkdir -p ~/Scripts
 ln -s ~/wal.sh ~/Scripts/wal.sh
