@@ -48,15 +48,15 @@ git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=3600'
 
 # Install Hack Nerd Font
-if fc-list | rg 'Hack Nerd Font'
+if fc-list | rg -q 'Hack Nerd Font'
 then
+    printf "Don't need to reinstall Hack Nerd Font\n"
+else
     git clone https://github.com/ryanoasis/nerd-fonts.git
     cd nerd-fonts
     ./install.sh Hack
     cd ..
     rm -rf nerd-fonts
-else
-    printf "Don't need to reinstall Hack Nerd Font"
 fi
 
 # Make fzf use ripgrep
