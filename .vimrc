@@ -69,6 +69,7 @@ map <C-l> <C-w>l
 " Easier buffer navigation
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprev<CR>
+nnoremap <C-c> :bp\|bd#<CR>
 
 " Intuitive split binds for buffers
 nnoremap <C-w><BS> <C-w>s
@@ -196,8 +197,8 @@ nnoremap <leader>sx :SClose<CR>
 let g:startify_files_number = 18
 let g:startify_session_persistence = 1
 let g:startify_lists = [
-    \ { 'type': 'dir',          'header': ['Recent files'] },
     \ { 'type': 'sessions',     'header': ['Saved sessions'] },
+    \ { 'type': 'dir',          'header': ['Recent files'] },
     \ ]
 " Patch to work with Goyo
 autocmd BufEnter *
