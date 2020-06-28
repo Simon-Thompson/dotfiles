@@ -40,8 +40,6 @@
 ## Later...
 - Clewn - debugging through gdb http://clewn.sourceforge.net/
 - Syntastic - syntax checking pre-compile https://github.com/vim-syntastic/syntastic
-- ctrlp.vim - fuzzy file, buffer, mru, tag search https://github.com/ctrlpvim/ctrlp.vim
-    - alternative: fzf.vim
 - ctrsf - fast search and edit (should use with vim-multiline) https://github.com/dyng/ctrlsf.vim
 - minibufexpl.vim - mark buffers like in GUI editors (doesn't konsole do this?) https://github.com/fholgado/minibufexpl.vim
 

@@ -13,6 +13,7 @@ set nu rnu
 set lazyredraw
 set updatetime=300      " Longer update times (default is 4000ms) leads to delays and poor ux
 set cmdheight=2         " Give more space for displaying messages
+set tags=./tags,tags;$HOME " Search for tags in current dir, then up till Home
 if exists('+termguicolors')
   let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
@@ -100,7 +101,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'liuchengxu/eleline.vim'
 " Completion and syntax
-Plug 'ludovicchabant/vim-gutentags', { 'commit': '31c0ead' }
+Plug '~/.vim/plugged/YouCompleteMe' " Manually installed
 Plug 'editorconfig/editorconfig-vim'
 " Editing and usability
 Plug 'matze/vim-move'
@@ -129,8 +130,6 @@ Plug 'mhinz/vim-startify'
 " Latex and Markdown
 Plug 'lervag/vimtex'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-" Disabled -- not used
-" Plug 'dylanaraps/wal.vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -150,7 +149,7 @@ endw
 set timeout ttimeoutlen=50
 
 " Ultisnips trigger config
-let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsExpandTrigger = '<C-j>' " share mapping with jump forward so as not to collide with YouCompleteMe
 let g:UltiSnipsJumpForwardTrigger = '<C-j>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 " If you want :UltiSnipsEdit to split your window.
@@ -163,7 +162,6 @@ nmap gs :vertical Gstatus<CR>
 map <F5> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists ("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Binds to make it behave more like ranger
-map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '▶'
 let g:NERDTreeDirArrowCollapsible = '▼'
 let g:NERDTreeMapOpenSplit='<BS>'
@@ -238,7 +236,12 @@ nnoremap <silent> <leader>  :<c-u>WhichKey '<Space>'<CR>
 " Fzf config
 nnoremap <leader>ff :Files<Cr>
 nnoremap <leader>fg :Rg<Cr>
+nnoremap <leader>fb :Buffers<Cr>
 
 " vim-rooter config
 let g:rooter_targets='*.h,*.cpp'
 let g:rooter_patterns=['Source/']
+
+" YouCompleteMe (YCM) config
+let g:ycm_global_ycm_extra_conf = '$HOME/.vim/ycm_extra_conf.py'
+let g:ycm_show_diagnostics_ui = 0

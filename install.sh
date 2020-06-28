@@ -4,7 +4,7 @@
 # AUR package manager
 sudo pacman -S --needed --noconfirm yay
 # Shell
-sudo pacman -S --needed --noconfirm zsh alacritty neofetch ranger nodejs npm w3m clang ctags
+sudo pacman -S --needed --noconfirm zsh alacritty neofetch ranger nodejs npm w3m clang ctags cmake python tmuxp
 # Editor
 sudo pacman -S --needed --noconfirm gvim tmux fzf ripgrep
 # Theming
@@ -68,11 +68,11 @@ printf "Install complete!\nRemember to add shortcuts for alacritty {M-Enter} and
 # Open vim and run :PlugInstall to install all its plugins. Coc should download all of its plugins when vim is opened as well
 # Run :CocCommand clangd.install FROM A C++ FILE to download clangd, restart the terminal and make sure it's been added to the path
 
-# Useful commands that aren't included in this install
+# Useful commands/tips that aren't included in this install
 
-### Run this command to create a compile_commands.json for clangd to read ###
-# cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1
-# More at https://clangd.llvm.org/installation.html#project-setup
+### KDE
+# Disable 'index file content' in KDE file search options
+# Disable 'Allow applications to block compositing' in KDE Compositor settings
 
 ### Mount NTFS drive for Steam Play in /etc/fstab ###
 # UUID=<your UID here>			  /run/media/vacuum/<whatever folder>		 ntfs-3g	 defaults,exec,uid=1000,gid=1000 0 2
