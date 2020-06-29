@@ -65,14 +65,19 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
 printf "Install complete!\nRemember to add shortcuts for alacritty {M-Enter} and Scripts/rofi.sh {M-d}\nand add Scripts/wal.sh to .xinitrc"
 
 # !Important
-# Open vim and run :PlugInstall to install all its plugins. Coc should download all of its plugins when vim is opened as well
-# Run :CocCommand clangd.install FROM A C++ FILE to download clangd, restart the terminal and make sure it's been added to the path
-
-# Useful commands/tips that aren't included in this install
-
-### KDE
-# Disable 'index file content' in KDE file search options
-# Disable 'Allow applications to block compositing' in KDE Compositor settings
+# Open vim and run :PlugInstall to install all its plugins. 
 
 ### Mount NTFS drive for Steam Play in /etc/fstab ###
 # UUID=<your UID here>			  /run/media/vacuum/<whatever folder>		 ntfs-3g	 defaults,exec,uid=1000,gid=1000 0 2
+
+# Useful commands/tips that aren't included in this install
+### KDE PRETTIFY
+# yay -S kvantum-qt5-git
+# Download Sweet themes https://store.kde.org/p/1294013
+# Setup themes in
+# - Window Decorations -> Sweet
+# - Application Style -> kvantum dark 
+# - Icons -> Candy
+# - Plasma Style -> Sweet
+# Disable 'index file content' in KDE file search options
+# Disable 'Allow applications to block compositing' in KDE Compositor settings

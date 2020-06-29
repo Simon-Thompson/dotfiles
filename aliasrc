@@ -1,3 +1,6 @@
+# Short-term aliases
+alias tmuxpotions="tmuxp ~/.tmuxp/potions.yaml"
+# aliases
 alias unreal="~/Programs/UnrealEngine-4.24/Engine/Binaries/Linux/UE4Editor"
 alias todo="vim ~/todo.md"
 alias kderestart="kquitapp5 plasmashell; kstart5 plasmashell"

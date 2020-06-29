@@ -101,7 +101,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'liuchengxu/eleline.vim'
 " Completion and syntax
-Plug '~/.vim/plugged/YouCompleteMe' " Manually installed
+Plug 'ajh17/VimCompletesMe'
 Plug 'editorconfig/editorconfig-vim'
 " Editing and usability
 Plug 'matze/vim-move'
@@ -149,7 +149,7 @@ endw
 set timeout ttimeoutlen=50
 
 " Ultisnips trigger config
-let g:UltiSnipsExpandTrigger = '<C-j>' " share mapping with jump forward so as not to collide with YouCompleteMe
+let g:UltiSnipsExpandTrigger = '<C-j>' " share mapping with jump forward so as not to collide with VimCompletesMe
 let g:UltiSnipsJumpForwardTrigger = '<C-j>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 " If you want :UltiSnipsEdit to split your window.
@@ -241,7 +241,3 @@ nnoremap <leader>fb :Buffers<Cr>
 " vim-rooter config
 let g:rooter_targets='*.h,*.cpp'
 let g:rooter_patterns=['Source/']
-
-" YouCompleteMe (YCM) config
-let g:ycm_global_ycm_extra_conf = '$HOME/.vim/ycm_extra_conf.py'
-let g:ycm_show_diagnostics_ui = 0
