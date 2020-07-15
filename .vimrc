@@ -121,6 +121,7 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'junegunn/fzf.vim'
 Plug 'liuchengxu/vim-which-key'
 Plug 'airblade/vim-rooter'
+Plug 'justinmk/vim-sneak'
 " Git for vim
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -160,6 +161,7 @@ nmap gs :vertical Gstatus<CR>
 
 " Nerdtree config
 map <F5> :NERDTreeToggle<CR>
+let g:NERDTreeWinSize=60
 autocmd bufenter * if (winnr("$") == 1 && exists ("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Binds to make it behave more like ranger
 let g:NERDTreeDirArrowExpandable = '▶'
@@ -226,6 +228,15 @@ nmap <C-p> <Plug>MarkdownPreviewToggle
 
 " vimtex config
 let g:vimtex_view_method = 'zathura'
+noremap <Leader>lf :let &cole=(&cole == 2) ? 0 : 2 <bar> echo 'conceallevel ' . &cole <CR>
+" Disable overfull/underfull \hbox and all package warnings
+let g:vimtex_quickfix_latexlog = {
+      \ 'overfull' : 0,
+      \ 'underfull' : 0,
+      \ 'packages' : {
+      \   'default' : 0,
+      \ },
+      \}
 
 " editorconfig config
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
@@ -241,3 +252,6 @@ nnoremap <leader>fb :Buffers<Cr>
 " vim-rooter config
 let g:rooter_targets='*.h,*.cpp'
 let g:rooter_patterns=['Source/']
+
+" vim-sneak config
+"let g:sneak#label=1

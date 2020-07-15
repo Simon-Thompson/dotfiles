@@ -24,7 +24,8 @@
 - traces.vim - highlights substitution text https://github.com/markonm/traces.vim
 - vim-peekaboo - shows registers in side preview when hiting " or @ https://github.com/junegunn/vim-peekaboo
 - WhickKey - visual helper showing commands after hitting a starting key https://github.com/liuchengxu/vim-which-key/
-- vim-rooter - auto change the working directory to the project root
+- vim-rooter - auto change the working directory to the project root https://github.com/airblade/vim-rooter
+- vim-sneak - jump to matching 2-letter term https://github.com/justinmk/vim-sneak
 ### Git for Vim
 - vim-fugitive - git directly inside the vim file https://github.com/tpope/vim-fugitive
 - vim-gitgutter - shows file changes for git https://github.com/airblade/vim-gitgutter
