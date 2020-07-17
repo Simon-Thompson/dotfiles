@@ -3,7 +3,6 @@
 
 ### Vim ###
 * Get autocomplete working!
-* Get something like vim sniper
 * Get tags working!
 * Consider reinstalling ctags and gutentags
 * Get a plugin for {[()]} autocomplete

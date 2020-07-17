@@ -101,7 +101,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'liuchengxu/eleline.vim'
 " Completion and syntax
-Plug 'ajh17/VimCompletesMe'
+Plug 'lifepillar/vim-mucomplete'
 Plug 'editorconfig/editorconfig-vim'
 " Editing and usability
 Plug 'matze/vim-move'
@@ -255,3 +255,9 @@ let g:rooter_patterns=['Source/']
 
 " vim-sneak config
 "let g:sneak#label=1
+
+" MUcomplete config
+set completeopt+=menuone
+set completeopt+=noselect
+set shortmess+=c
+let g:mucomplete#enable_auto_at_startup=1

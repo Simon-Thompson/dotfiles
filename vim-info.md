@@ -6,6 +6,7 @@
 - vim-devicons - adds icons from Nerd Fonts https://github.com/ryanoasis/vim-devicons
 - eleline.vim - status bar with support for most of my plugins https://github.com/liuchengxu/eleline.vim
 ### Completion & Syntax
+- MUcomplete - minimalist, configurable autocompletion https://github.com/lifepillar/vim-mucomplete
 - editorconfig - configures vim from a .editorconfig file. See https://github.com/editorconfig/editorconfig-vim and https://editorconfig.org/ for more
 
 ### Editing and Usability
