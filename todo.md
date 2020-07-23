@@ -5,7 +5,6 @@
 * Get autocomplete working!
 * Get tags working!
 * Consider reinstalling ctags and gutentags
-* Get a plugin for {[()]} autocomplete
 * Learn about folding
 * Learn about vim autocommands
 * Learn about vim buffers

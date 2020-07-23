@@ -102,6 +102,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'liuchengxu/eleline.vim'
 " Completion and syntax
 Plug 'lifepillar/vim-mucomplete'
+Plug 'xavierd/clang_complete'
 Plug 'editorconfig/editorconfig-vim'
 " Editing and usability
 Plug 'matze/vim-move'
@@ -109,7 +110,7 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-repeat'
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+"Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'gcmt/wildfire.vim'
 Plug 'derekwyatt/vim-fswitch'
 Plug 'Yggdroot/indentLine'
@@ -149,12 +150,12 @@ while c <= 'z'
 endw
 set timeout ttimeoutlen=50
 
-" Ultisnips trigger config
-let g:UltiSnipsExpandTrigger = '<C-j>' " share mapping with jump forward so as not to collide with VimCompletesMe
-let g:UltiSnipsJumpForwardTrigger = '<C-j>'
-let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+"" Ultisnips trigger config
+"let g:UltiSnipsExpandTrigger = '<C-f>' " don't collide with MUcomplete
+"let g:UltiSnipsJumpForwardTrigger = '<C-f>' " don't collide with MUcomplete
+"let g:UltiSnipsJumpBackwardTrigger = '<C-b>'
+"" If you want :UltiSnipsEdit to split your window.
+"let g:UltiSnipsEditSplit="vertical"
 
 " Fugitive
 nmap gs :vertical Gstatus<CR>
@@ -194,6 +195,7 @@ let g:eleline_powerline_fonts=1
 " vim-startify config
 nnoremap <leader>ss :SSave<CR>
 nnoremap <leader>sx :SClose<CR>
+nnoremap <leader>sd :SDelete<CR>
 let g:startify_files_number = 18
 let g:startify_session_persistence = 1
 let g:startify_lists = [
@@ -256,8 +258,16 @@ let g:rooter_patterns=['Source/']
 " vim-sneak config
 "let g:sneak#label=1
 
+" vim-peekaboo
+let g:peekaboo_ins_prefix='<c-x>' " need to hit <c-x><c-r> to see registers
+
 " MUcomplete config
-set completeopt+=menuone
-set completeopt+=noselect
+set completeopt-=preview
+set completeopt+=menuone,noselect
 set shortmess+=c
 let g:mucomplete#enable_auto_at_startup=1
+imap <expr> <down> mucomplete#extend_fwd("\<down>")
+
+" clang-complete config
+let g:clang_library_path='/usr/lib64/libclang.so'
+let g:clang_complete_auto=1
