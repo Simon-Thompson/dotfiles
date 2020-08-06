@@ -4,6 +4,7 @@ alias tmuxpotions="tmuxp load ~/.tmuxp/potions.yaml"
 alias unreal="~/Programs/UnrealEngine-4.24/Engine/Binaries/Linux/UE4Editor"
 alias todo="vim ~/todo.md"
 alias kderestart="kquitapp5 plasmashell; kstart5 plasmashell"
+alias sshpi="ssh pi@192.168.0.106"
 # .Xresources handling - reload, merge
 alias xm="xrdb -merge ~/.Xresources"
 alias xr="xrdb ~/.Xresources"
