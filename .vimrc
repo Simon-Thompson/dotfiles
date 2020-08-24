@@ -14,11 +14,11 @@ set lazyredraw
 set updatetime=300      " Longer update times (default is 4000ms) leads to delays and poor ux
 set cmdheight=2         " Give more space for displaying messages
 set tags=./tags,tags;$HOME " Search for tags in current dir, then up till Home
-if exists('+termguicolors')
-  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
+"if exists('+termguicolors')
+  "let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+  "let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+  "set termguicolors
+"endif
 
 " Put plugins and dictionaries in this dir (also on Windows)
 let vimDir = '$HOME/.vim'
@@ -185,8 +185,13 @@ filetype plugin on
 
 " Goyo config
 nnoremap <F1> :Goyo<CR>
-let g:goyo_width = 120
+let g:goyo_width = 180
 let g:goyo_height = 85
+" keep transparency on exit
+function! s:goyo_leave()
+         hi Normal guibg=NONE ctermbg=NONE
+endfunction
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " eleline config
 set laststatus=2
