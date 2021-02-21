@@ -1,5 +1,6 @@
 #! /bin/bash
 
+sudo pacman -S --needed --noconfirm base-devel
 ### Programs ###
 # AUR package manager
 sudo pacman -S --needed --noconfirm yay
@@ -16,7 +17,7 @@ sudo pacman -S --needed --noconfirm texlive-bin texlive-core texlive-latexextra
 # Launcher
 sudo pacman -S --needed --noconfirm rofi
 # Note-taking
-yay -S --needed --noconfirm joplin
+yay -S --needed --noconfirm joplin joplin-desktop
 
 # tmux plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -29,16 +30,18 @@ mkdir -p ~/.config/zsh
 mkdir -p ~/.config/zathura
 mkdir -p ~/.config/ranger
 mkdir -p ~/.config/neofetch
-ln -s ~/aliasrc ~/.config/zsh/aliasrc 
-ln -s ~/antigen.zsh ~/.config/zsh/antigen.zsh
-ln -s ~/functionrc ~/.config/zsh/functionrc
-ln -s ~/zathurarc ~/.config/zathura/zathurarc
-ln -s ~/rc.conf ~/.config/ranger/rc.conf
-ln -s ~/.neofetchconf ~/.config/neofetch/config.conf
+mkdir -p ~/.config/alacritty
+ln -s ~/dotfiles/aliasrc ~/.config/zsh/aliasrc 
+ln -s ~/dotfiles/antigen.zsh ~/.config/zsh/antigen.zsh
+ln -s ~/dotfiles/functionrc ~/.config/zsh/functionrc
+ln -s ~/dotfiles/zathurarc ~/.config/zathura/zathurarc
+ln -s ~/dotfiles/rc.conf ~/.config/ranger/rc.conf
+ln -s ~/dotfiles/.neofetchconf ~/.config/neofetch/config.conf
+ln -s ~/dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
 # Scripts
 mkdir -p ~/Scripts
-ln -s ~/wal.sh ~/Scripts/wal.sh
-ln -s ~/rofi.sh ~/Scripts/rofi.sh
+ln -s ~/dotfiles/wal.sh ~/Scripts/wal.sh
+ln -s ~/dotfiles/rofi.sh ~/Scripts/rofi.sh
 
 # Switch to zsh
 chsh -s /bin/zsh
