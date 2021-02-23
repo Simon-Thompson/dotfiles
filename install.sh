@@ -12,6 +12,7 @@ sudo pacman -S --needed --noconfirm gvim tmux fzf ripgrep
 sudo pacman -S --needed --noconfirm python procps feh imagemagick python-pywal
 # PDF viewing
 sudo pacman -S --needed --noconfirm zathura
+sudo pacman -S --needed --noconfirm zathura-pdf-mupdf
 # Latex
 sudo pacman -S --needed --noconfirm texlive-bin texlive-core texlive-latexextra
 # Launcher
