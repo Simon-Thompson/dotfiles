@@ -5,7 +5,7 @@ sudo pacman -S --needed --noconfirm base-devel
 # AUR package manager
 sudo pacman -S --needed --noconfirm yay
 # Shell
-sudo pacman -S --needed --noconfirm zsh alacritty neofetch ranger nodejs npm w3m clang ctags cmake python tmuxp
+sudo pacman -S --needed --noconfirm zsh alacritty neofetch ranger nodejs npm w3m clang ctags cmake python tmuxp gtop
 # Editor
 sudo pacman -S --needed --noconfirm gvim tmux fzf ripgrep
 # Theming
@@ -32,6 +32,11 @@ mkdir -p ~/.config/zathura
 mkdir -p ~/.config/ranger
 mkdir -p ~/.config/neofetch
 mkdir -p ~/.config/alacritty
+ln -s ~/dotfiles/.Xresources ~/.Xresources 
+ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf 
+ln -s ~/dotfiles/.vimrc ~/.vimrc 
+ln -s ~/dotfiles/.zshenv ~/.zshenv 
+ln -s ~/dotfiles/.zshrc ~/.zshrc 
 ln -s ~/dotfiles/aliasrc ~/.config/zsh/aliasrc 
 ln -s ~/dotfiles/antigen.zsh ~/.config/zsh/antigen.zsh
 ln -s ~/dotfiles/functionrc ~/.config/zsh/functionrc
