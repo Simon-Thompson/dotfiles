@@ -1,5 +1,7 @@
-# Short-term aliases
-alias tmuxpotions="tmuxp load ~/.tmuxp/potions.yaml"
+# tmuxp aliases
+alias tjoplin="tmuxp load ~/.tmuxp/joplin.yaml"
+alias twrite="tmuxp load ~/.tmuxp/write.yaml"
+alias tpotions="tmuxp load ~/.tmuxp/potions.yaml"
 # aliases
 alias unreal="~/Programs/UnrealEngine-4.24/Engine/Binaries/Linux/UE4Editor"
 alias todo="vim ~/todo.md"

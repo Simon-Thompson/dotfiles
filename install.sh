@@ -1,10 +1,11 @@
 #! /bin/bash
 
+sudo pacman -S --needed --noconfirm base-devel
 ### Programs ###
 # AUR package manager
 sudo pacman -S --needed --noconfirm yay
 # Shell
-sudo pacman -S --needed --noconfirm zsh alacritty neofetch ranger nodejs npm w3m clang ctags cmake python tmuxp starship
+sudo pacman -S --needed --noconfirm zsh alacritty neofetch ranger nodejs npm w3m clang ctags cmake python tmuxp starship gtop
 # Editor
 sudo pacman -S --needed --noconfirm gvim tmux fzf ripgrep
 # Theming
@@ -16,7 +17,7 @@ sudo pacman -S --needed --noconfirm texlive-bin texlive-core texlive-latexextra
 # Launcher
 sudo pacman -S --needed --noconfirm rofi
 # Note-taking
-yay -S --needed --noconfirm joplin
+yay -S --needed --noconfirm joplin joplin-desktop
 
 # tmux plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -39,6 +40,7 @@ ln -s ~/dotfiles/functionrc ~/.config/zsh/functionrc
 ln -s ~/dotfiles/zathurarc ~/.config/zathura/zathurarc
 ln -s ~/dotfiles/rc.conf ~/.config/ranger/rc.conf
 ln -s ~/dotfiles/.neofetchconf ~/.config/neofetch/config.conf
+ln -s ~/dotfiles/.alacritty.yml ~/.alacritty.yml
 # Scripts
 mkdir -p ~/Scripts
 ln -s ~/dotfiles/wal.sh ~/Scripts/wal.sh
