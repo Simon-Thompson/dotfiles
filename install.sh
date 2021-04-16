@@ -4,13 +4,13 @@
 # AUR package manager
 sudo pacman -S --needed --noconfirm yay
 # Shell
-sudo pacman -S --needed --noconfirm zsh alacritty neofetch ranger nodejs npm w3m clang ctags cmake python tmuxp
+sudo pacman -S --needed --noconfirm zsh alacritty neofetch ranger nodejs npm w3m clang ctags cmake python tmuxp starship
 # Editor
 sudo pacman -S --needed --noconfirm gvim tmux fzf ripgrep
 # Theming
 sudo pacman -S --needed --noconfirm python procps feh imagemagick python-pywal
 # PDF viewing
-sudo pacman -S --needed --noconfirm zathura
+sudo pacman -S --needed --noconfirm zathura zathura-pdf-mupdf
 # Latex
 sudo pacman -S --needed --noconfirm texlive-bin texlive-core texlive-latexextra
 # Launcher
@@ -22,23 +22,27 @@ yay -S --needed --noconfirm joplin
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ### Dotfiles ###
-mv -t ~/ .vimrc .zshrc .zshenv .Xresources .tmux.conf
 # Configs
 mkdir -p ~/.config
 mkdir -p ~/.config/zsh
 mkdir -p ~/.config/zathura
 mkdir -p ~/.config/ranger
 mkdir -p ~/.config/neofetch
-ln -s ~/aliasrc ~/.config/zsh/aliasrc 
-ln -s ~/antigen.zsh ~/.config/zsh/antigen.zsh
-ln -s ~/functionrc ~/.config/zsh/functionrc
-ln -s ~/zathurarc ~/.config/zathura/zathurarc
-ln -s ~/rc.conf ~/.config/ranger/rc.conf
-ln -s ~/.neofetchconf ~/.config/neofetch/config.conf
+ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/.zshrc ~/.zshrc
+ln -s ~/.dotfiles/zshenv ~/.zshenv
+ln -s ~/.dotfiles/.Xresources ~/.Xresources
+ln -s ~/dotfiles/.tmux.conf
+ln -s ~/dotfiles/aliasrc ~/.config/zsh/aliasrc 
+ln -s ~/dotfiles/antigen.zsh ~/.config/zsh/antigen.zsh
+ln -s ~/dotfiles/functionrc ~/.config/zsh/functionrc
+ln -s ~/dotfiles/zathurarc ~/.config/zathura/zathurarc
+ln -s ~/dotfiles/rc.conf ~/.config/ranger/rc.conf
+ln -s ~/dotfiles/.neofetchconf ~/.config/neofetch/config.conf
 # Scripts
 mkdir -p ~/Scripts
-ln -s ~/wal.sh ~/Scripts/wal.sh
-ln -s ~/rofi.sh ~/Scripts/rofi.sh
+ln -s ~/dotfiles/wal.sh ~/Scripts/wal.sh
+ln -s ~/dotfiles/rofi.sh ~/Scripts/rofi.sh
 
 # Switch to zsh
 chsh -s /bin/zsh

@@ -59,3 +59,5 @@ bindkey -v '^h' backward-delete-char
 
 neofetch
 echo "$(cat $HOME/todo.md)"
+
+eval "$(starship init zsh)"

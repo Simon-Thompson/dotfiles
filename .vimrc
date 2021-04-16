@@ -244,6 +244,9 @@ let g:vimtex_quickfix_latexlog = {
       \   'default' : 0,
       \ },
       \}
+let g:vimtex_compiler_latexmk = {
+            \ 'build_dir' : 'build',
+            \}
 
 " editorconfig config
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
