@@ -9,7 +9,7 @@ sudo pacman -S --needed --noconfirm zsh alacritty neofetch ranger nodejs npm w3m
 # Editor
 sudo pacman -S --needed --noconfirm gvim tmux fzf ripgrep
 # Theming
-sudo pacman -S --needed --noconfirm python procps feh imagemagick python-pywal
+sudo pacman -S --needed --noconfirm procps feh imagemagick python-pywal
 # PDF viewing
 sudo pacman -S --needed --noconfirm zathura zathura-pdf-mupdf
 # Latex
@@ -42,6 +42,7 @@ ln -s ~/dotfiles/zathurarc ~/.config/zathura/zathurarc
 ln -s ~/dotfiles/rc.conf ~/.config/ranger/rc.conf
 ln -s ~/dotfiles/.neofetchconf ~/.config/neofetch/config.conf
 ln -s ~/dotfiles/.alacritty.yml ~/.alacritty.yml
+ln -s ~/dotfiles/todo.md ~/todo.md
 # Scripts
 mkdir -p ~/Scripts
 ln -s ~/dotfiles/wal.sh ~/Scripts/wal.sh
