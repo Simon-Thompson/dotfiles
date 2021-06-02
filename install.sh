@@ -29,6 +29,7 @@ mkdir -p ~/.config/zsh
 mkdir -p ~/.config/zathura
 mkdir -p ~/.config/ranger
 mkdir -p ~/.config/neofetch
+mkdir -p ~/.tmuxp
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/zshenv ~/.zshenv
