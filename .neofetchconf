@@ -745,7 +745,7 @@ image_source="auto"
 #       Slackware, SunOS, LinuxLite, OpenSUSE, Raspbian,
 #       postmarketOS, and Void have a smaller logo variant.
 #       Use '{distro name}_small' to use the small variants.
-ascii_distro="Arch"
+ascii_distro="Arch_small"
 
 # Ascii Colors
 #
@@ -811,7 +811,7 @@ crop_offset="center"
 # Values:  'auto', '00px', '00%', 'none'
 # Flags:   --image_size
 #          --size
-image_size="auto"
+image_size="10px"
 
 # Gap between image and text
 #

@@ -1,5 +1,4 @@
 # tmuxp aliases
-alias tjoplin="tmuxp load ~/.tmuxp/joplin.yaml"
 alias twrite="tmuxp load ~/.tmuxp/write.yaml"
 alias tpotions="tmuxp load ~/.tmuxp/potions.yaml"
 # aliases

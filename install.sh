@@ -5,14 +5,13 @@ sudo pacman -S --needed --noconfirm base-devel
 # AUR package manager
 sudo pacman -S --needed --noconfirm yay
 # Shell
-sudo pacman -S --needed --noconfirm zsh alacritty neofetch ranger nodejs npm w3m clang ctags cmake python tmuxp gtop
+sudo pacman -S --needed --noconfirm zsh alacritty neofetch ranger nodejs npm w3m clang ctags cmake python tmuxp starship gtop
 # Editor
 sudo pacman -S --needed --noconfirm gvim tmux fzf ripgrep
 # Theming
-sudo pacman -S --needed --noconfirm python procps feh imagemagick python-pywal
+sudo pacman -S --needed --noconfirm procps feh imagemagick python-pywal
 # PDF viewing
-sudo pacman -S --needed --noconfirm zathura
-sudo pacman -S --needed --noconfirm zathura-pdf-mupdf
+sudo pacman -S --needed --noconfirm zathura zathura-pdf-mupdf
 # Latex
 sudo pacman -S --needed --noconfirm texlive-bin texlive-core texlive-latexextra
 # Launcher
@@ -24,26 +23,26 @@ yay -S --needed --noconfirm joplin-desktop
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ### Dotfiles ###
-mv -t ~/ .vimrc .zshrc .zshenv .Xresources .tmux.conf
 # Configs
 mkdir -p ~/.config
 mkdir -p ~/.config/zsh
 mkdir -p ~/.config/zathura
 mkdir -p ~/.config/ranger
 mkdir -p ~/.config/neofetch
-mkdir -p ~/.config/alacritty
-ln -s ~/dotfiles/.Xresources ~/.Xresources 
-ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf 
-ln -s ~/dotfiles/.vimrc ~/.vimrc 
-ln -s ~/dotfiles/.zshenv ~/.zshenv 
-ln -s ~/dotfiles/.zshrc ~/.zshrc 
+mkdir -p ~/.tmuxp
+ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/.zshrc ~/.zshrc
+ln -s ~/.dotfiles/zshenv ~/.zshenv
+ln -s ~/.dotfiles/.Xresources ~/.Xresources
+ln -s ~/dotfiles/.tmux.conf
 ln -s ~/dotfiles/aliasrc ~/.config/zsh/aliasrc 
 ln -s ~/dotfiles/antigen.zsh ~/.config/zsh/antigen.zsh
 ln -s ~/dotfiles/functionrc ~/.config/zsh/functionrc
 ln -s ~/dotfiles/zathurarc ~/.config/zathura/zathurarc
 ln -s ~/dotfiles/rc.conf ~/.config/ranger/rc.conf
 ln -s ~/dotfiles/.neofetchconf ~/.config/neofetch/config.conf
-ln -s ~/dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -s ~/dotfiles/.alacritty.yml ~/.alacritty.yml
+ln -s ~/dotfiles/todo.md ~/todo.md
 # Scripts
 mkdir -p ~/Scripts
 ln -s ~/dotfiles/wal.sh ~/Scripts/wal.sh
