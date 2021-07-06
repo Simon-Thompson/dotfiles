@@ -18,7 +18,7 @@ sudo pacman -S --needed --noconfirm texlive-bin texlive-core texlive-latexextra
 # Launcher
 sudo pacman -S --needed --noconfirm rofi
 # Note-taking
-yay -S --needed --noconfirm joplin joplin-desktop
+yay -S --needed --noconfirm joplin-desktop
 
 # tmux plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
