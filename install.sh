@@ -17,7 +17,7 @@ sudo pacman -S --needed --noconfirm texlive-bin texlive-core texlive-latexextra
 # Launcher
 sudo pacman -S --needed --noconfirm rofi
 # Note-taking
-yay -S --needed --noconfirm joplin-desktop
+sudo pacman -S --needed --noconfirm obsidian
 
 # tmux plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -41,7 +41,7 @@ ln -s ~/dotfiles/functionrc ~/.config/zsh/functionrc
 ln -s ~/dotfiles/zathurarc ~/.config/zathura/zathurarc
 ln -s ~/dotfiles/rc.conf ~/.config/ranger/rc.conf
 ln -s ~/dotfiles/.neofetchconf ~/.config/neofetch/config.conf
-ln -s ~/dotfiles/.alacritty.yml ~/.alacritty.yml
+ln -s ~/dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
 ln -s ~/dotfiles/todo.md ~/todo.md
 # Scripts
 mkdir -p ~/Scripts
@@ -72,22 +72,4 @@ fi
 # Make fzf use ripgrep
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
 
-printf "Install complete!\nRemember to add shortcuts for alacritty {M-Enter} and Scripts/rofi.sh {M-d}\nand add Scripts/wal.sh to .xinitrc"
-
-# !Important
-# Open vim and run :PlugInstall to install all its plugins. 
-
-### Mount NTFS drive for Steam Play in /etc/fstab ###
-# UUID=<your UID here>			  /run/media/vacuum/<whatever folder>		 ntfs-3g	 defaults,exec,uid=1000,gid=1000 0 2
-
-# Useful commands/tips that aren't included in this install
-### KDE PRETTIFY
-# yay -S kvantum-qt5-git
-# Download Sweet themes https://store.kde.org/p/1294013
-# Setup themes in
-# - Window Decorations -> Sweet
-# - Application Style -> kvantum dark 
-# - Icons -> Candy
-# - Plasma Style -> Sweet
-# Disable 'index file content' in KDE file search options
-# Disable 'Allow applications to block compositing' in KDE Compositor settings
+printf "Install complete!\nOpen vim and run :PlugInstall\nRemember to add shortcuts for alacritty {M-Enter} and Scripts/rofi.sh {M-d}\nand add Scripts/wal.sh to .xinitrc"

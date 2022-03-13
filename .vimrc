@@ -235,6 +235,7 @@ nmap <C-p> <Plug>MarkdownPreviewToggle
 
 " vimtex config
 let g:vimtex_view_method = 'zathura'
+let g:vimtex_compiler_engine = 'lualatex'
 noremap <Leader>lf :let &cole=(&cole == 2) ? 0 : 2 <bar> echo 'conceallevel ' . &cole <CR>
 " Disable overfull/underfull \hbox and all package warnings
 let g:vimtex_quickfix_latexlog = {
