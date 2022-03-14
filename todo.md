@@ -1,3 +1,6 @@
+### Git ###
+* Hook up PAT to work automagically
+
 ### Programs ###
 * Research IRC/multiprotocol chat client for fb messenger & discord (bitlbee + weechat or rambox?)
 
