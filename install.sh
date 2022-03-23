@@ -1,15 +1,21 @@
 #! /bin/bash
 
-sudo pacman -S --needed --noconfirm base-devel
 ### Programs ###
-# AUR package manager
-sudo pacman -S --needed --noconfirm yay
+# AUR Manager
+sudo pacman -S --needed --noconfirm git base-devel
+git clone https://aur.archlinux.org/yay-git.git
+cd yay-git
+makepkg -s
+rm -rf yay-git
+cd ~/
+# Web browser
+sudo pacman -S --needed --noconfirm firefox
+# File manager
+sudo pacman -S --needed --noconfirm thunar p7zip
 # Shell
-sudo pacman -S --needed --noconfirm zsh alacritty neofetch ranger nodejs npm w3m clang ctags cmake python tmuxp starship gtop
+sudo pacman -S --needed --noconfirm zsh alacritty neofetch python tmuxp starship gtop
 # Editor
 sudo pacman -S --needed --noconfirm gvim tmux fzf ripgrep
-# Theming
-sudo pacman -S --needed --noconfirm procps feh imagemagick python-pywal
 # PDF viewing
 sudo pacman -S --needed --noconfirm zathura zathura-pdf-mupdf
 # Latex
@@ -17,41 +23,35 @@ sudo pacman -S --needed --noconfirm texlive-bin texlive-core texlive-latexextra
 # Launcher
 sudo pacman -S --needed --noconfirm rofi
 # Note-taking
-sudo pacman -S --needed --noconfirm obsidian
+sudo pacman -S --needed --noconfirm obsidian syncthing
 
 # tmux plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ### Dotfiles ###
 # Configs
-mkdir -p ~/.config
+mkdir -p ~/.config/awesome
 mkdir -p ~/.config/zsh
 mkdir -p ~/.config/zathura
-mkdir -p ~/.config/ranger
 mkdir -p ~/.config/neofetch
+mkdir -p ~/.config/alacritty
 mkdir -p ~/.tmuxp
+ln -s ~/dotfiles/rc.lua ~/.config/awesome/rc.lua
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/zshenv ~/.zshenv
 ln -s ~/.dotfiles/.Xresources ~/.Xresources
-ln -s ~/dotfiles/.tmux.conf
+ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/aliasrc ~/.config/zsh/aliasrc 
 ln -s ~/dotfiles/antigen.zsh ~/.config/zsh/antigen.zsh
 ln -s ~/dotfiles/functionrc ~/.config/zsh/functionrc
 ln -s ~/dotfiles/zathurarc ~/.config/zathura/zathurarc
-ln -s ~/dotfiles/rc.conf ~/.config/ranger/rc.conf
 ln -s ~/dotfiles/.neofetchconf ~/.config/neofetch/config.conf
 ln -s ~/dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
 ln -s ~/dotfiles/todo.md ~/todo.md
-# Scripts
-mkdir -p ~/Scripts
-ln -s ~/dotfiles/wal.sh ~/Scripts/wal.sh
-ln -s ~/dotfiles/rofi.sh ~/Scripts/rofi.sh
 
 # Switch to zsh
 chsh -s /bin/zsh
-# Install placeholder theme
-wal --theme base16-dracula -a 96
 
 # Setup git credential cache
 git config --global credential.helper cache
@@ -72,4 +72,4 @@ fi
 # Make fzf use ripgrep
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
 
-printf "Install complete!\nOpen vim and run :PlugInstall\nRemember to add shortcuts for alacritty {M-Enter} and Scripts/rofi.sh {M-d}\nand add Scripts/wal.sh to .xinitrc"
+printf "###\nInstall complete!\nOpen vim to run :PlugInstall\n###\n"

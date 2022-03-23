@@ -1,20 +1,3 @@
-!General settings
-URxvt*termName:             rxvt-256color
-URxvt*perl-ext-common:      resize-font,selection-to-clipboard,matcher
-URxvt*font: xft:Hack Nerd Font Mono:size=14, xft:Symbola:style=Regular:size=14,xft:M+ 1c
-URxvt*url-launcher:         /usr/bin/firefox
-!URxvt*urlLauncher:         /usr/bin/firefox
-URxvt*scrollBar:            false
-!URxvt*scrollBar_right:      true
-URxvt.iso14755:             False
-URxvt*dynamicColors:        on
-URxvt.internalBorder:       10
-URxvt.underlineURLs:        true
-URxvt.matcher.button:       1
-URxvt.copyCommand:          xclip -i -selection clipboard
-URxvt.pasteCommand:         xclip -o -selection clipboard
-URxvt.cursorBlink:          0
-
-! urxvt scrolling setup - up and down 10 lines
-URxvt.keysym.Shift-Up:      command:\033]720;10\007
-URxvt.keysym.Shift-Down:    command:\033]721;10\007
+# General Settings
+Xft.dpi: 216.33
+Xft.antialias: 1

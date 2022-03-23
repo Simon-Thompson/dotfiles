@@ -3,8 +3,6 @@ export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 export KEYTIMEOUT=2
 export PATH="/home/vacuum/.local/bin:$PATH"
-# Import colorscheme from 'wal'
-(cat "$HOME/.cache/wal/sequences" &)
 
 ## Setup vi mode
 bindkey -v
@@ -23,7 +21,6 @@ antigen apply
 # Sources
 source "${HOME}/.config/zsh/aliasrc"
 source "${HOME}/.config/zsh/functionrc"
-source "${HOME}/.cache/wal/colors.sh"
 
 ## Change cursor with support for inside/outside tmux
 #function _set_cursor() {

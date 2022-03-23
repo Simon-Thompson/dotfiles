@@ -4,8 +4,6 @@ alias tpotions="tmuxp load ~/.tmuxp/potions.yaml"
 # aliases
 alias unreal="~/Programs/UnrealEngine-4.24/Engine/Binaries/Linux/UE4Editor"
 alias todo="vim ~/todo.md"
-alias kderestart="kquitapp5 plasmashell; kstart5 plasmashell"
-alias sshpi="ssh pi@192.168.0.106"
 # .Xresources handling - reload, merge
 alias xm="xrdb -merge ~/.Xresources"
 alias xr="xrdb ~/.Xresources"
@@ -29,11 +27,12 @@ alias ta="tmux attach-session"
 
 # Config editing binds
 alias cfv="vim ~/.vimrc"
-alias cfr="vim ~/.config/ranger/rc.conf"
 alias cfx="vim ~/.Xresources"
 alias cfz="vim ~/.zshrc"
 alias cft="vim ~/.tmux.conf"
 alias cfa="vim ~/.config/zsh/aliasrc"
+alias cfalacritty="vim ~/.config/alacritty/alacritty.yml"
+alias cfawe="vim ~/.config/awesome/rc.lua"
 
 # Lock screen when afk
 alias afk="loginctl lock-session"
