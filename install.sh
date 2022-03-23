@@ -5,13 +5,13 @@
 sudo pacman -S --needed --noconfirm git base-devel
 git clone https://aur.archlinux.org/yay-git.git
 cd yay-git
-makepkg -s
+makepkg -si
 rm -rf yay-git
 cd ~/
 # Web browser
 sudo pacman -S --needed --noconfirm firefox
 # File manager
-sudo pacman -S --needed --noconfirm thunar p7zip
+sudo pacman -S --needed --noconfirm pcmanfm p7zip
 # Shell
 sudo pacman -S --needed --noconfirm zsh alacritty neofetch python tmuxp starship gtop
 # Editor
@@ -21,7 +21,7 @@ sudo pacman -S --needed --noconfirm zathura zathura-pdf-mupdf
 # Latex
 sudo pacman -S --needed --noconfirm texlive-bin texlive-core texlive-latexextra
 # Launcher
-sudo pacman -S --needed --noconfirm rofi
+sudo pacman -S --needed --noconfirm rofi dmenu
 # Note-taking
 sudo pacman -S --needed --noconfirm obsidian syncthing
 
