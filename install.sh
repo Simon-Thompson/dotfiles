@@ -12,6 +12,8 @@ cd ~/
 sudo pacman -S --needed --noconfirm firefox
 # File manager
 sudo pacman -S --needed --noconfirm pcmanfm p7zip
+# Login manager
+sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter
 # Shell
 sudo pacman -S --needed --noconfirm zsh alacritty neofetch python tmuxp starship gtop
 # Editor
@@ -71,5 +73,8 @@ fi
 
 # Make fzf use ripgrep
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
+
+# Enable lightdm
+sudo systemctl enable lightdm
 
 printf "###\nInstall complete!\nOpen vim to run :PlugInstall\n###\n"

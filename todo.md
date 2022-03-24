@@ -1,7 +1,6 @@
 ### Setup ###
-- Get copy/paste into vim working
+- Get copy/paste out of vim working
 - Tile different apps properly
-- Run startx on launch
 
 ### Git ###
 - Hook up PAT to work automagically
