@@ -1,1 +1,59 @@
-/home/vacuum/aliasrc
+# tmuxp aliases
+alias twrite="tmuxp load ~/.tmuxp/write.yaml"
+alias tpotions="tmuxp load ~/.tmuxp/potions.yaml"
+# aliases
+alias unreal="~/Programs/UnrealEngine-4.24/Engine/Binaries/Linux/UE4Editor"
+alias todo="vim ~/todo.md"
+# .Xresources handling - reload, merge
+alias xm="xrdb -merge ~/.Xresources"
+alias xr="xrdb ~/.Xresources"
+alias xprop="xprop WM_CLASS WM_NAME"
+
+# ls replacement for tree, and for fsically an ls replacement for tree
+ alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
+alias ftree="find | sed 's|[^/]*/|- |g'"
+
+colorflag='--color'
+
+# ask when deleting multiple
+alias rm="rm -I"
+
+# Basic colored ls
+alias ls="ls ${colorflag} --human-readable --group-directories-first -1 --classify"
+
+# Some shorthand launching
+alias tmux='TERM=screen-256color tmux'
+alias t="tmux"
+alias ta="tmux attach-session"
+
+# Config editing binds
+alias cfv="vim ~/.vimrc"
+alias cfx="vim ~/.Xresources"
+alias cfz="vim ~/.zshrc"
+alias cft="vim ~/.tmux.conf"
+alias cfa="vim ~/.config/zsh/aliasrc"
+alias cfalacritty="vim ~/.config/alacritty/alacritty.yml"
+alias cfawe="vim ~/.config/awesome/rc.lua"
+
+# Lock screen when afk
+alias afk="loginctl lock-session"
+alias afksleep="systemctl suspend"
+
+# Reload shell
+alias reload="exec $SHELL -l"
+
+# Sped up cd navigation
+alias cd.="cd .."
+alias cd..="cd .."
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+#suffix aliases
+alias -s txt=vim
+alias -s h=vim
+alias -s cpp=vim
+
+# rofi
+alias rofi="~/Scripts/rofi.sh"

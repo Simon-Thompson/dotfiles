@@ -4,8 +4,9 @@
 # AUR Manager
 sudo pacman -S --needed --noconfirm git base-devel
 git clone https://aur.archlinux.org/yay-git.git
-cd yay-git
+cd yay-git/
 makepkg -si
+cd ..
 rm -rf yay-git
 cd ~/
 # Web browser
@@ -13,7 +14,15 @@ sudo pacman -S --needed --noconfirm firefox
 # File manager
 sudo pacman -S --needed --noconfirm pcmanfm p7zip
 # Login manager
-sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter
+git clone --recurse-submodules https://github.com/nullgemm/ly.git
+cd ly/
+make
+sudo make install
+sudo systemctl enable ly.service
+sudo systemctl disable getty@tty2.service
+cd ..
+rm -rf ly
+cd ~
 # Shell
 sudo pacman -S --needed --noconfirm zsh alacritty neofetch python tmuxp starship gtop
 # Editor
@@ -38,18 +47,19 @@ mkdir -p ~/.config/zathura
 mkdir -p ~/.config/neofetch
 mkdir -p ~/.config/alacritty
 mkdir -p ~/.tmuxp
-ln -s ~/dotfiles/rc.lua ~/.config/awesome/rc.lua
+ln -s ~/dotfiles/.config/awesome/rc.lua ~/.config/awesome/rc.lua
+ln -s ~/dotfiles/.config/awesome/autorun.sh ~/.config/awesome/autorun.sh
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/zshenv ~/.zshenv
 ln -s ~/.dotfiles/.Xresources ~/.Xresources
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/aliasrc ~/.config/zsh/aliasrc 
-ln -s ~/dotfiles/antigen.zsh ~/.config/zsh/antigen.zsh
-ln -s ~/dotfiles/functionrc ~/.config/zsh/functionrc
-ln -s ~/dotfiles/zathurarc ~/.config/zathura/zathurarc
-ln -s ~/dotfiles/.neofetchconf ~/.config/neofetch/config.conf
-ln -s ~/dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -s ~/dotfiles/.config/zsh/aliasrc ~/.config/zsh/aliasrc 
+ln -s ~/dotfiles/.config/zsh/antigen.zsh ~/.config/zsh/antigen.zsh
+ln -s ~/dotfiles/.config/zsh/functionrc ~/.config/zsh/functionrc
+ln -s ~/dotfiles/.config/zathura/zathurarc ~/.config/zathura/zathurarc
+ln -s ~/dotfiles/.config/neofetch/.neofetchconf ~/.config/neofetch/config.conf
+ln -s ~/dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 ln -s ~/dotfiles/todo.md ~/todo.md
 
 # Switch to zsh
@@ -76,5 +86,6 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
 
 # Enable lightdm
 sudo systemctl enable lightdm
+chmod +x autorun.sh
 
 printf "###\nInstall complete!\nOpen vim to run :PlugInstall\n###\n"

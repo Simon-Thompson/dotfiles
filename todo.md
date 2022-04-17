@@ -1,6 +1,5 @@
 ### Setup ###
-- Get copy/paste out of vim working
-- Tile different apps properly
+- Change font size in obsidian code block
 
 ### Git ###
 - Hook up PAT to work automagically
