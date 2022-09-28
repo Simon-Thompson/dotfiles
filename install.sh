@@ -36,18 +36,18 @@ mkdir -p ~/.config/zathura
 mkdir -p ~/.config/neofetch
 mkdir -p ~/.config/alacritty
 mkdir -p ~/.tmuxp
-ln -sf ~/dotfiles ~/dotfiles/.vimrc ~/.vimrc
-ln -sf ~/dotfiles ~/dotfiles/.zshrc ~/.zshrc
-ln -sf ~/dotfiles/.zshenv ~/.zshenv
-ln -sf ~/dotfiles/.Xresources ~/.Xresources
-ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
-ln -sf ~/dotfiles/.config/zsh/aliasrc ~/.config/zsh/aliasrc 
-ln -sf ~/dotfiles/.config/zsh/antigen.zsh ~/.config/zsh/antigen.zsh
-ln -sf ~/dotfiles/.config/zsh/functionrc ~/.config/zsh/functionrc
-ln -sf ~/dotfiles/.config/zathura/zathurarc ~/.config/zathura/zathurarc
-ln -sf ~/dotfiles/.config/neofetch/.neofetchconf ~/.config/neofetch/config.conf
-ln -sf ~/dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
-ln -sf ~/dotfiles/todo.md ~/todo.md
+ln -sfn ~/dotfiles ~/dotfiles/.vimrc ~/.vimrc
+ln -sfn ~/dotfiles ~/dotfiles/.zshrc ~/.zshrc
+ln -sfn ~/dotfiles/.zshenv ~/.zshenv
+ln -sfn ~/dotfiles/.Xresources ~/.Xresources
+ln -sfn ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -sfn ~/dotfiles/.config/zsh/aliasrc ~/.config/zsh/aliasrc 
+ln -sfn ~/dotfiles/.config/zsh/antigen.zsh ~/.config/zsh/antigen.zsh
+ln -sfn ~/dotfiles/.config/zsh/functionrc ~/.config/zsh/functionrc
+ln -sfn ~/dotfiles/.config/zathura/zathurarc ~/.config/zathura/zathurarc
+ln -sfn ~/dotfiles/.config/neofetch/.neofetchconf ~/.config/neofetch/config.conf
+ln -sfn ~/dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -sfn ~/dotfiles/todo.md ~/todo.md
 
 # Switch to zsh
 chsh -s /bin/zsh
