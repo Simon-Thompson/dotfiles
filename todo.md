@@ -15,3 +15,7 @@
 - Learn about vim autocommands
 - Learn about vim buffers
 - Read more ultisnips docs
+
+### Sway ###
+- Open in workspace and go to workspace
+- Install snip tool

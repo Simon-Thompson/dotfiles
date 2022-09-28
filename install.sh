@@ -13,20 +13,10 @@ cd ~/
 sudo pacman -S --needed --noconfirm firefox
 # File manager
 sudo pacman -S --needed --noconfirm pcmanfm p7zip
-# Login manager
-git clone --recurse-submodules https://github.com/nullgemm/ly.git
-cd ly/
-make
-sudo make install
-sudo systemctl enable ly.service
-sudo systemctl disable getty@tty2.service
-cd ..
-rm -rf ly
-cd ~
 # Shell
 sudo pacman -S --needed --noconfirm zsh alacritty neofetch python tmuxp starship gtop
 # Editor
-sudo pacman -S --needed --noconfirm gvim tmux fzf ripgrep
+sudo pacman -S --needed --noconfirm gvim tmux fzf ripgrep geany
 # PDF viewing
 sudo pacman -S --needed --noconfirm zathura zathura-pdf-mupdf
 # Latex
@@ -41,26 +31,23 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ### Dotfiles ###
 # Configs
-mkdir -p ~/.config/awesome
 mkdir -p ~/.config/zsh
 mkdir -p ~/.config/zathura
 mkdir -p ~/.config/neofetch
 mkdir -p ~/.config/alacritty
 mkdir -p ~/.tmuxp
-ln -s ~/dotfiles/.config/awesome/rc.lua ~/.config/awesome/rc.lua
-ln -s ~/dotfiles/.config/awesome/autorun.sh ~/.config/awesome/autorun.sh
-ln -s ~/dotfiles/.vimrc ~/.vimrc
-ln -s ~/dotfiles/.zshrc ~/.zshrc
-ln -s ~/.dotfiles/zshenv ~/.zshenv
-ln -s ~/.dotfiles/.Xresources ~/.Xresources
-ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/.config/zsh/aliasrc ~/.config/zsh/aliasrc 
-ln -s ~/dotfiles/.config/zsh/antigen.zsh ~/.config/zsh/antigen.zsh
-ln -s ~/dotfiles/.config/zsh/functionrc ~/.config/zsh/functionrc
-ln -s ~/dotfiles/.config/zathura/zathurarc ~/.config/zathura/zathurarc
-ln -s ~/dotfiles/.config/neofetch/.neofetchconf ~/.config/neofetch/config.conf
-ln -s ~/dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
-ln -s ~/dotfiles/todo.md ~/todo.md
+ln -sf ~/dotfiles ~/dotfiles/.vimrc ~/.vimrc
+ln -sf ~/dotfiles ~/dotfiles/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/.zshenv ~/.zshenv
+ln -sf ~/dotfiles/.Xresources ~/.Xresources
+ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -sf ~/dotfiles/.config/zsh/aliasrc ~/.config/zsh/aliasrc 
+ln -sf ~/dotfiles/.config/zsh/antigen.zsh ~/.config/zsh/antigen.zsh
+ln -sf ~/dotfiles/.config/zsh/functionrc ~/.config/zsh/functionrc
+ln -sf ~/dotfiles/.config/zathura/zathurarc ~/.config/zathura/zathurarc
+ln -sf ~/dotfiles/.config/neofetch/.neofetchconf ~/.config/neofetch/config.conf
+ln -sf ~/dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -sf ~/dotfiles/todo.md ~/todo.md
 
 # Switch to zsh
 chsh -s /bin/zsh
@@ -70,7 +57,7 @@ git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=3600'
 
 # Install Hack Nerd Font
-if fc-list | rg -q 'Hack Nerd Font'
+if fc-list | rg 'Hack Nerd Font'
 then
     printf "Don't need to reinstall Hack Nerd Font\n"
 else
@@ -83,9 +70,5 @@ fi
 
 # Make fzf use ripgrep
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
-
-# Enable lightdm
-sudo systemctl enable lightdm
-chmod +x autorun.sh
 
 printf "###\nInstall complete!\nOpen vim to run :PlugInstall\n###\n"

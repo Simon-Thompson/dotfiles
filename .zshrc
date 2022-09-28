@@ -54,7 +54,7 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^h' backward-delete-char
 
-neofetch
-echo "$(cat $HOME/todo.md)"
+#neofetch
+#echo "$(cat $HOME/todo.md)"
 
 eval "$(starship init zsh)"
