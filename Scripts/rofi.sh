@@ -1,15 +1,15 @@
 #!/bin/zsh
-. "${HOME}/.cache/wal/colors.sh"
+#. "${HOME}/.cache/wal/colors.sh"
 
-bg=$color0
-border=$color2
-separator=$color2
-fg=$color7
-bgalt=$color0
-urgent=$color9
-fgalt=$color7
-hlbg=$color2
-hlfg=$color0
+#bg=$color0
+#border=$color2
+#separator=$color2
+#fg=$color7
+#bgalt=$color0
+#urgent=$color9
+#fgalt=$color7
+#hlbg=$color2
+#hlfg=$color0
 
 # argument $1 expected to be window/run
 rofi -show run \

@@ -25,6 +25,8 @@ sudo pacman -S --needed --noconfirm texlive-bin texlive-core texlive-latexextra
 sudo pacman -S --needed --noconfirm rofi dmenu
 # Note-taking
 sudo pacman -S --needed --noconfirm obsidian syncthing
+# Screenshot
+sudo pacman -S -needed --noconfirm scrot xclip
 
 # tmux plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -36,6 +38,7 @@ mkdir -p ~/.config/zathura
 mkdir -p ~/.config/neofetch
 mkdir -p ~/.config/alacritty
 mkdir -p ~/.tmuxp
+mkdir -p ~/Scripts
 ln -sfn ~/dotfiles ~/dotfiles/.vimrc ~/.vimrc
 ln -sfn ~/dotfiles ~/dotfiles/.zshrc ~/.zshrc
 ln -sfn ~/dotfiles/.zshenv ~/.zshenv
@@ -47,6 +50,9 @@ ln -sfn ~/dotfiles/.config/zsh/functionrc ~/.config/zsh/functionrc
 ln -sfn ~/dotfiles/.config/zathura/zathurarc ~/.config/zathura/zathurarc
 ln -sfn ~/dotfiles/.config/neofetch/.neofetchconf ~/.config/neofetch/config.conf
 ln -sfn ~/dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -sfn ~/dotfiles/Scripts/switch-audio.sh ~/Scripts/switch-audio.sh
+ln -sfn ~/dotfiles/Scripts/rofi.sh ~/Scripts/rofi.sh
+ln -sfn ~/dotfiles/Scripts/screenshot.sh ~/Scripts/screenshot.sh
 ln -sfn ~/dotfiles/todo.md ~/todo.md
 
 # Switch to zsh
