@@ -3,7 +3,7 @@
 # Install Sway
 sudo pacman -S --needed --noconfirm sway swayidle
 # Install addons
-sudo pacman -S --needed --noconfirm udisks2 udiskie gammastep neomutt light mpv imv mpd mpc ncmpcpp pulseaudio pulseaudio-alsa
+sudo pacman -S --needed --noconfirm udisks2 udiskie gammastep neomutt light mpv imv mpd mpc ncmpcpp pulseaudio pulseaudio-alsa grim wl-clipboard slurp
 yay -S --needed --noconfirm swaylock-effects-git autotiling cava
 # Config files
 mkdir -p ~/bin
