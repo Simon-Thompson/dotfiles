@@ -16,7 +16,7 @@ sudo pacman -S --needed --noconfirm pcmanfm p7zip
 # Shell
 sudo pacman -S --needed --noconfirm zsh alacritty neofetch python tmuxp starship gtop
 # Editor
-sudo pacman -S --needed --noconfirm gvim tmux fzf ripgrep geany
+sudo pacman -S --needed --noconfirm gvim tmux fzf ripgrep geany vifm
 # PDF viewing
 sudo pacman -S --needed --noconfirm zathura zathura-pdf-mupdf
 # Latex
@@ -39,21 +39,21 @@ mkdir -p ~/.config/neofetch
 mkdir -p ~/.config/alacritty
 mkdir -p ~/.tmuxp
 mkdir -p ~/Scripts
-ln -sfn ~/dotfiles ~/dotfiles/.vimrc ~/.vimrc
-ln -sfn ~/dotfiles ~/dotfiles/.zshrc ~/.zshrc
-ln -sfn ~/dotfiles/.zshenv ~/.zshenv
-ln -sfn ~/dotfiles/.Xresources ~/.Xresources
-ln -sfn ~/dotfiles/.tmux.conf ~/.tmux.conf
-ln -sfn ~/dotfiles/.config/zsh/aliasrc ~/.config/zsh/aliasrc 
-ln -sfn ~/dotfiles/.config/zsh/antigen.zsh ~/.config/zsh/antigen.zsh
-ln -sfn ~/dotfiles/.config/zsh/functionrc ~/.config/zsh/functionrc
-ln -sfn ~/dotfiles/.config/zathura/zathurarc ~/.config/zathura/zathurarc
-ln -sfn ~/dotfiles/.config/neofetch/.neofetchconf ~/.config/neofetch/config.conf
-ln -sfn ~/dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
-ln -sfn ~/dotfiles/Scripts/switch-audio.sh ~/Scripts/switch-audio.sh
-ln -sfn ~/dotfiles/Scripts/rofi.sh ~/Scripts/rofi.sh
-ln -sfn ~/dotfiles/Scripts/screenshot.sh ~/Scripts/screenshot.sh
-ln -sfn ~/dotfiles/todo.md ~/todo.md
+ln -sf ~/dotfiles ~/dotfiles/.vimrc ~/.vimrc
+ln -sf ~/dotfiles ~/dotfiles/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/.zshenv ~/.zshenv
+ln -sf ~/dotfiles/.Xresources ~/.Xresources
+ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -sf ~/dotfiles/.config/zsh/aliasrc ~/.config/zsh/aliasrc 
+ln -sf ~/dotfiles/.config/zsh/antigen.zsh ~/.config/zsh/antigen.zsh
+ln -sf ~/dotfiles/.config/zsh/functionrc ~/.config/zsh/functionrc
+ln -sf ~/dotfiles/.config/zathura/zathurarc ~/.config/zathura/zathurarc
+ln -sf ~/dotfiles/.config/neofetch/.neofetchconf ~/.config/neofetch/config.conf
+ln -sf ~/dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -sf ~/dotfiles/Scripts/switch-audio.sh ~/Scripts/switch-audio.sh
+ln -sf ~/dotfiles/Scripts/rofi.sh ~/Scripts/rofi.sh
+ln -sf ~/dotfiles/Scripts/screenshot.sh ~/Scripts/screenshot.sh
+ln -sf ~/dotfiles/todo.md ~/todo.md
 
 # Switch to zsh
 chsh -s /bin/zsh
