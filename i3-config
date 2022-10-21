@@ -128,6 +128,15 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+# i3-layouts config
+set $i3l vstack to workspace $ws1
+set $i3l hstack 0.6 up to workspace $ws2
+set $i3l spiral 0.6 to workspace $ws3
+set $i3l 3columns 0.66 0.5 2 left to workspace $ws4
+set $i3l 2columns right to workspace $ws5
+set $i3l companion 0.3 0.4 up to workspace $ws6
+set $i3l autosplit to workspace $ws7
+
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -193,3 +202,6 @@ bindsym $mod+Shift+a exec --no-startup-id "/home/vacuum/Scripts/switch-audio.sh"
 
 # Start Polybar
 exec_always --no-startup-id $HOME/.config/polybar/polylaunch.sh
+
+# Start i3-layouts for configurable tiling
+exec i3-layouts

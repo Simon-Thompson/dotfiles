@@ -2,7 +2,7 @@
 
 ### Programs ###
 # AUR Manager
-sudo pacman -S --needed --noconfirm git base-devel
+pacman -S --needed --noconfirm git base-devel
 git clone https://aur.archlinux.org/yay-git.git
 cd yay-git/
 makepkg -si
@@ -10,23 +10,23 @@ cd ..
 rm -rf yay-git
 cd ~/
 # Web browser
-sudo pacman -S --needed --noconfirm firefox
+pacman -S --needed --noconfirm firefox
 # File manager
-sudo pacman -S --needed --noconfirm pcmanfm p7zip
+pacman -S --needed --noconfirm pcmanfm p7zip
 # Shell
-sudo pacman -S --needed --noconfirm zsh alacritty neofetch python tmuxp starship gtop
+pacman -S --needed --noconfirm zsh alacritty neofetch python tmuxp starship gtop
 # Editor
-sudo pacman -S --needed --noconfirm gvim tmux fzf ripgrep geany vifm
+pacman -S --needed --noconfirm gvim tmux fzf ripgrep geany vifm
 # PDF viewing
-sudo pacman -S --needed --noconfirm zathura zathura-pdf-mupdf
+pacman -S --needed --noconfirm zathura zathura-pdf-mupdf
 # Latex
-sudo pacman -S --needed --noconfirm texlive-bin texlive-core texlive-latexextra
+pacman -S --needed --noconfirm texlive-bin texlive-core texlive-latexextra
 # Launcher
-sudo pacman -S --needed --noconfirm rofi dmenu papirus-icon-theme
+pacman -S --needed --noconfirm rofi dmenu papirus-icon-theme
 # Note-taking
-sudo pacman -S --needed --noconfirm obsidian syncthing
+pacman -S --needed --noconfirm obsidian syncthing
 # Screenshot
-sudo pacman -S -needed --noconfirm scrot xclip
+pacman -S -needed --noconfirm scrot xclip
 
 # tmux plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -70,5 +70,9 @@ yay -S nerd-fonts-fantasque-sans-mono
 
 # Make fzf use ripgrep
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
+
+# Enable and start syncthing
+systemctl enable syncthing@vacuum.service
+systemctl start syncthing@vacuum.service
 
 printf "###\nInstall complete!\nOpen vim to run :PlugInstall\n###\n"
