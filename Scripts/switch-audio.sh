@@ -16,5 +16,5 @@ NEW_SINK=$(echo "$SINKS" | sed "${NEW_SINK_INDEX}q;d" | awk '{ print $2 }')
 pactl set-default-sink "$NEW_SINK"
 
 # Forward all playing audio (sink inputs) to the new sink
-SINK_INPUTS=($(pactl list short sink-inputs | egrep -o '^[0-9]+'))
+SINK_INPUTS=($(pactl list short sink-inputs | egrep -o '?!.*spotify'))
 for SINK_INPUT in ${SINK_INPUTS[*]}; do pactl move-sink-input $SINK_INPUT $NEW_SINK; done

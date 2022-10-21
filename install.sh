@@ -22,7 +22,7 @@ sudo pacman -S --needed --noconfirm zathura zathura-pdf-mupdf
 # Latex
 sudo pacman -S --needed --noconfirm texlive-bin texlive-core texlive-latexextra
 # Launcher
-sudo pacman -S --needed --noconfirm rofi dmenu
+sudo pacman -S --needed --noconfirm rofi dmenu papirus-icon-theme
 # Note-taking
 sudo pacman -S --needed --noconfirm obsidian syncthing
 # Screenshot
@@ -50,10 +50,13 @@ ln -sf ~/dotfiles/.config/zsh/functionrc ~/.config/zsh/functionrc
 ln -sf ~/dotfiles/.config/zathura/zathurarc ~/.config/zathura/zathurarc
 ln -sf ~/dotfiles/.config/neofetch/.neofetchconf ~/.config/neofetch/config.conf
 ln -sf ~/dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -sf ~/dotfiles/todo.md ~/todo.md
+
+# Scripts
 ln -sf ~/dotfiles/Scripts/switch-audio.sh ~/Scripts/switch-audio.sh
 ln -sf ~/dotfiles/Scripts/rofi.sh ~/Scripts/rofi.sh
 ln -sf ~/dotfiles/Scripts/screenshot.sh ~/Scripts/screenshot.sh
-ln -sf ~/dotfiles/todo.md ~/todo.md
+ln -sf ~/dotfiles/Scripts/extract.sh ~/Scripts/extract.sh
 
 # Switch to zsh
 chsh -s /bin/zsh
@@ -62,17 +65,8 @@ chsh -s /bin/zsh
 git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=3600'
 
-# Install Hack Nerd Font
-if fc-list | rg 'Hack Nerd Font'
-then
-    printf "Don't need to reinstall Hack Nerd Font\n"
-else
-    git clone https://github.com/ryanoasis/nerd-fonts.git
-    cd nerd-fonts
-    ./install.sh Hack
-    cd ..
-    rm -rf nerd-fonts
-fi
+# Install fonts
+yay -S nerd-fonts-fantasque-sans-mono
 
 # Make fzf use ripgrep
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
