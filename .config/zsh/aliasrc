@@ -53,10 +53,10 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-#suffix aliases
+# suffix aliases
 alias -s txt=vim
 alias -s h=vim
 alias -s cpp=vim
 
-# rofi
-alias rofi="~/Scripts/rofi.sh"
+# Time in terminal with tty
+alias time="tty-clock -c"

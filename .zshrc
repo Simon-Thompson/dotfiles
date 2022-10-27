@@ -54,6 +54,9 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^h' backward-delete-char
 
+# Import colorscheme from 'wal' asynchronously
+(cat ~/.cache/wal/sequences &)
+
 #neofetch
 #echo "$(cat $HOME/todo.md)"
 
