@@ -26,7 +26,8 @@ sqlite lib32-sqlite libxcomposite lib32-libxcomposite libxinerama lib32-libgcryp
 ncurses lib32-ncurses ocl-icd lib32-ocl-icd libxslt lib32-libxslt libva lib32-libva gtk3 \
 lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs vulkan-icd-loader lib32-vulkan-icd-loader wine-mono
 
-# Pywal, Pywalfox, BetterDiscord, pywal-discord and Spicetify for theming
+# Pywal and friends for theming
+# Pywalfox, BetterDiscord, pywal-discord, Spicetify, zathura-pywal
 pacman -S imagemagick python-pywal
 chmod a+wr /opt/spotify
 chmod a+wr /opt/spotify/Apps -R
@@ -34,6 +35,12 @@ yay -S -needed --noconfirm spicetify-cli betterdiscord-installer pywal-discord-g
 betterdiscord-installer --no-sandbox
 pywalfox install
 pywalfox update
+git clone https://github.com/GideonWolfe/Zathura-Pywal
+cd Zathura-Pywal
+./install.sh
+..
+rm -rf Zathura-Pywal/
+echo "Remember to edit set recolor false in ~/.local/bin/genzathurarc"
 
 # Config
 mkdir -p ~/.config/i3

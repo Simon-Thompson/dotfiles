@@ -1,8 +1,10 @@
 #! /bin/sh
 
-echo "First arg: $1"
+wal -i $1
 
-# Update spicetify, discord and firefox wal themes
-#spicetify apply
-#pywalfox update
+# Update spicetify and firefox wal themes
+spicetify apply
+pywalfox update
+
+# Discord, rofi, zathura, alacritty & vim should update automatically
 

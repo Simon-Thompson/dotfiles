@@ -96,7 +96,8 @@ call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins.
 " Theming
-Plug 'dracula/vim', { 'as': 'dracula' }
+"Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'dylanaraps/wal.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'liuchengxu/eleline.vim'
@@ -137,7 +138,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 call plug#end()
 
 " Need to be called after plugins are loaded
-colorscheme dracula
+colorscheme wal
 hi Normal ctermbg=NONE guibg=NONE
 
 " vim-move config
