@@ -33,30 +33,14 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ### Dotfiles ###
 # Configs
-mkdir -p ~/.config/zsh
-mkdir -p ~/.config/zathura
-mkdir -p ~/.config/neofetch
-mkdir -p ~/.config/alacritty
 mkdir -p ~/.tmuxp
 mkdir -p ~/Scripts
-ln -sf ~/dotfiles ~/dotfiles/.vimrc ~/.vimrc
-ln -sf ~/dotfiles ~/dotfiles/.zshrc ~/.zshrc
-ln -sf ~/dotfiles/.zshenv ~/.zshenv
-ln -sf ~/dotfiles/.Xresources ~/.Xresources
-ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
-ln -sf ~/dotfiles/.config/zsh/aliasrc ~/.config/zsh/aliasrc 
-ln -sf ~/dotfiles/.config/zsh/antigen.zsh ~/.config/zsh/antigen.zsh
-ln -sf ~/dotfiles/.config/zsh/functionrc ~/.config/zsh/functionrc
-ln -sf ~/dotfiles/.config/zathura/zathurarc ~/.config/zathura/zathurarc
-ln -sf ~/dotfiles/.config/neofetch/.neofetchconf ~/.config/neofetch/config.conf
-ln -sf ~/dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+find ~/dotfiles/home -type f -exec ln -sf {} ~/ \; -print
+cp -asf ~/dotfiles/.config ~/.config
 ln -sf ~/dotfiles/todo.md ~/todo.md
 
 # Scripts
-ln -sf ~/dotfiles/Scripts/switch-audio.sh ~/Scripts/switch-audio.sh
-ln -sf ~/dotfiles/Scripts/rofi.sh ~/Scripts/rofi.sh
-ln -sf ~/dotfiles/Scripts/screenshot.sh ~/Scripts/screenshot.sh
-ln -sf ~/dotfiles/Scripts/extract.sh ~/Scripts/extract.sh
+find ~/dotfiles/Scripts -type f -exec ln -sf {} ~/Scripts \; -print
 
 # Switch to zsh
 chsh -s /bin/zsh

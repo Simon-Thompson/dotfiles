@@ -100,7 +100,7 @@ html.newBrand {
   --header-secondary: var(--color7);
   --text-normal: var(--color7);
   --text-muted: var(--color7);
-  --text-link: var(--color0);
+  --text-link: var(--color2);
   --channels-default: var(--foreground);
   --interactive-normal: var(--foreground);
   --interactive-hover: var(--foreground);

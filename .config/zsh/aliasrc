@@ -59,4 +59,4 @@ alias -s h=vim
 alias -s cpp=vim
 
 # Time in terminal with tty
-alias time="tty-clock -c"
+alias time="tty-clock -c -t"

@@ -43,18 +43,4 @@ rm -rf Zathura-Pywal/
 echo "Remember to edit set recolor false in ~/.local/bin/genzathurarc"
 
 # Config
-mkdir -p ~/.config/i3
-mkdir -p ~/.config/picom
-mkdir -p ~/.config/polybar
-ln -sf ~/dotfiles/.config/i3/i3-config ~/.config/i3/config
-ln -sf ~/dotfiles/.config/picom/picom.conf ~/.config/picom/picom.conf
-ln -sf ~/dotfiles/.config/polybar/config.ini ~/.config/polybar/config.ini
-ln -sf ~/dotfiles/.config/polybar/polylaunch.sh ~/.config/polybar/polylaunch.sh
-
-# Style
-mkdir -p ~/Pictures/Wallpapers
-mkdir -p ~/.config/BetterDiscord/themes
-mkdir -p ~/.config/spicetify
-ln -sf ~/dotfiles/.config/spicetify/config-xpui.ini ~/.config/spicetify/config-xpui.ini
-ln -sf ~/dotfiles/.config/BetterDiscord/themes/pywal-discord-default.theme.css ~/.config/BetterDiscord/themes/pywal-discord-default.theme.css
-ln -sf ~/dotfiles/Scripts/wal-update.sh ~/Scripts/wal-update.sh
+cp -asf ~/dotfiles/i3/.config ~/.config

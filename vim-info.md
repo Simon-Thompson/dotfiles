@@ -1,6 +1,6 @@
 # Installed plugins
 ### Theming
-- dracula - colorscheme
+- dracula OR wal
 - goyo - focus mode - https://github.com/junegunn/goyo.vim
 - wal.vim - sets the pywal theme on vim https://github.com/dylanaraps/wal.vim
 - vim-devicons - adds icons from Nerd Fonts https://github.com/ryanoasis/vim-devicons
