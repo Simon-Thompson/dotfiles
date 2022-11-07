@@ -79,6 +79,10 @@ nnoremap <C-w>\  <C-w>v
 " Tmux like close split
 map <C-w>x <C-w>q
 
+" Intuitive back and forward jump
+nnoremap gb <C-o>
+nnoremap gf <C-i>
+
 " I mess these up when going fast
 command WQ wq
 command Wq wq

@@ -16,7 +16,7 @@ pacman -S --needed --noconfirm pcmanfm p7zip
 # Shell
 pacman -S --needed --noconfirm zsh alacritty neofetch python tmuxp starship gtop
 # Editor
-pacman -S --needed --noconfirm gvim tmux fzf ripgrep geany vifm
+pacman -S --needed --noconfirm gvim tmux fzf ripgrep fd geany vifm
 # PDF viewing
 pacman -S --needed --noconfirm zathura zathura-pdf-mupdf
 # Latex
@@ -53,7 +53,7 @@ git config --global credential.helper 'cache --timeout=3600'
 yay -S nerd-fonts-fantasque-sans-mono
 
 # Make fzf use ripgrep
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
+export FZF_DEFAULT_COMMAND='fd --type file --hidden --no-ignore'
 
 # Enable and start syncthing
 systemctl enable syncthing@vacuum.service

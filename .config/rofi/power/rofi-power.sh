@@ -1,6 +1,6 @@
 #!/bin/sh
 
-rofi_command="rofi -theme $HOME/.config/rofi/rofi-power/config.rasi -p "power""
+rofi_command="rofi -theme $HOME/.config/rofi/power/config.rasi -p "power""
 
 #### Options ###
 log_out="﫼  Logout"

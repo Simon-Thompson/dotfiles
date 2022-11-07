@@ -1,0 +1,8 @@
+--glob=!*.git
+--glob=!*.ica
+--glob=!**/Games
+--glob=!**/Documents/Notes
+
+--smart-case=true
+
+

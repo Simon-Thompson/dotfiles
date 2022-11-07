@@ -52,6 +52,8 @@ bindsym $mod+space exec "/home/vacuum/.config/rofi/rofi-wrapper.sh drun"
 bindsym $alt+Tab exec "/home/vacuum/.config/rofi/rofi-wrapper.sh windows"
 # Start rofi media launcher
 bindsym $mod+e exec "/home/vacuum/.config/rofi/rofi-wrapper.sh media"
+# Start rofi file opener
+bindsym $mod+d exec --no-startup-id "/home/vacuum/.config/rofi/rofi-wrapper.sh files"
 
 # change focus
 bindsym $mod+j focus left
@@ -226,6 +228,8 @@ for_window [class="^.*"] border pixel 0
 bindsym --release $mod+Shift+s exec --no-startup-id "/home/vacuum/Scripts/snip.sh"
 bindsym $mod+Shift+a exec --no-startup-id "/home/vacuum/Scripts/switch-audio.sh"
 bindsym $mod+s exec --no-startup-id "/home/vacuum/Scripts/startup.sh"
+#bindsym $mod+d exec --no-startup-id alacritty -t 'fzf-menu' -e 'i3-dmenu-desktop --dmenu=fzf'
+#for_window [title="fzf-menu"] floating enable
 
 # Assign windows to default workspaces
 # Use assign for most, for_window for annoying ones
@@ -233,15 +237,13 @@ for_window [class="discord"] move to workspace $ws4
 for_window [class="Spotify"] move to workspace $ws5
 assign [class="steam*"] 1
 assign [class="Wfica"] 6
-
-# Start Polybar
-exec_always --no-startup-id $HOME/.config/polybar/polylaunch.sh
+assign [class="Zathura"] 2
 
 # Run audio switcher once to set the sinks
 exec --no-startup-id /home/vacuum/Scripts/switch-audio.sh
 
 # Start i3-layouts for configurable tiling
-exec --no-startup-id i3-layouts
+#exec --no-startup-id i3-layouts
 
 # Refresh wal themes
 exec --no-startup-id wal -n -R
@@ -249,3 +251,5 @@ exec --no-startup-id wal -n -R
 # Start wallpaper with feh
 exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/fantasy-valley-castle.jpg ~/Pictures/Wallpapers/fantasy-valley-vertical.jpg ~/Pictures/Wallpapers/fantasy-valley-ultrawide.jpg ~/Pictures/Wallpapers/fantasy-valley-river.jpg
 
+# Start Polybar
+exec_always --no-startup-id $HOME/.config/polybar/polylaunch.sh
