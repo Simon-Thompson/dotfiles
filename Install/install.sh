@@ -16,7 +16,7 @@ pacman -S --needed --noconfirm pcmanfm p7zip
 # Shell
 pacman -S --needed --noconfirm zsh alacritty neofetch python tmuxp starship gtop
 # Editor
-pacman -S --needed --noconfirm gvim tmux fzf ripgrep fd geany vifm
+pacman -S --needed --noconfirm gvim tmux fzf ripgrep fd geany nnn
 # PDF viewing
 pacman -S --needed --noconfirm zathura zathura-pdf-mupdf
 # Latex

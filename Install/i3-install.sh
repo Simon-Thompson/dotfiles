@@ -14,6 +14,8 @@ pacman -S -needed --noconfirm picom
 # Polybar for bar stuff
 pacman -S -needed --noconfirm polybar playerctl
 yay -S -needed --noconfirm polybar-spotify
+# Flameshot for screenshots
+pacman -S -needed --noconfirm flameshot
 
 # tty-clock for fun
 yay -S tty-clock-git

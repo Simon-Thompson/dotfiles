@@ -25,7 +25,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id lxpolkit
 
 # Start compositor with picom
-exec_always --no-startup-id picom --experimental-backends -b
+exec_always --no-startup-id picom -b
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -45,15 +45,6 @@ bindsym $mod+b exec firefox
 
 # close (kill) focused window
 bindsym $mod+c kill
-
-# Start rofi application launcher
-bindsym $mod+space exec "/home/vacuum/.config/rofi/rofi-wrapper.sh drun"
-# Start rofi window switcher
-bindsym $alt+Tab exec "/home/vacuum/.config/rofi/rofi-wrapper.sh windows"
-# Start rofi media launcher
-bindsym $mod+e exec "/home/vacuum/.config/rofi/rofi-wrapper.sh media"
-# Start rofi file opener
-bindsym $mod+d exec --no-startup-id "/home/vacuum/.config/rofi/rofi-wrapper.sh files"
 
 # change focus
 bindsym $mod+j focus left
@@ -224,12 +215,22 @@ gaps outer 3
 #remove window titles and no border 
 for_window [class="^.*"] border pixel 0
 
+# Start rofi application launcher
+bindsym $mod+space exec "/home/vacuum/.config/rofi/rofi-wrapper.sh drun"
+# Start rofi window switcher
+bindsym $alt+Tab exec "/home/vacuum/.config/rofi/rofi-wrapper.sh windows"
+# Start rofi media launcher
+bindsym $mod+e exec "/home/vacuum/.config/rofi/rofi-wrapper.sh media"
+# Start rofi file opener
+bindsym $mod+d exec --no-startup-id "/home/vacuum/.config/rofi/rofi-wrapper.sh files"
+# Start rofi utilities launcher
+bindsym $mod+u exec --no-startup-id "/home/vacuum/.config/rofi/rofi-wrapper.sh utilities"
+
 # Hotkeys
 bindsym --release $mod+Shift+s exec --no-startup-id "/home/vacuum/Scripts/snip.sh"
 bindsym $mod+Shift+a exec --no-startup-id "/home/vacuum/Scripts/switch-audio.sh"
 bindsym $mod+s exec --no-startup-id "/home/vacuum/Scripts/startup.sh"
-#bindsym $mod+d exec --no-startup-id alacritty -t 'fzf-menu' -e 'i3-dmenu-desktop --dmenu=fzf'
-#for_window [title="fzf-menu"] floating enable
+bindsym --release Print exec --nostartup-id "flameshot gui"
 
 # Assign windows to default workspaces
 # Use assign for most, for_window for annoying ones
@@ -245,6 +246,10 @@ exec --no-startup-id /home/vacuum/Scripts/switch-audio.sh
 # Start i3-layouts for configurable tiling
 #exec --no-startup-id i3-layouts
 
+# Set screesaver timeout and sleep timeout
+exec s 900
+exec xset dpms 0 0 1200
+
 # Refresh wal themes
 exec --no-startup-id wal -n -R
 
@@ -252,4 +257,4 @@ exec --no-startup-id wal -n -R
 exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/fantasy-valley-castle.jpg ~/Pictures/Wallpapers/fantasy-valley-vertical.jpg ~/Pictures/Wallpapers/fantasy-valley-ultrawide.jpg ~/Pictures/Wallpapers/fantasy-valley-river.jpg
 
 # Start Polybar
-exec_always --no-startup-id $HOME/.config/polybar/polylaunch.sh
+exec_always --no-startup-id sleep 1 && $HOME/.config/polybar/polylaunch.sh

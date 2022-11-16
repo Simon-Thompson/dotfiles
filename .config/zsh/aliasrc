@@ -60,3 +60,6 @@ alias -s cpp=vim
 
 # Time in terminal with tty
 alias time="tty-clock -c -t"
+
+# nnn shortcut
+alias nnn="nnn -a -e -c"

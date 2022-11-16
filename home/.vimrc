@@ -155,11 +155,11 @@ while c <= 'z'
 endw
 set timeout ttimeoutlen=50
 
-"" Ultisnips trigger config
-"let g:UltiSnipsExpandTrigger = '<C-f>' " don't collide with MUcomplete
-"let g:UltiSnipsJumpForwardTrigger = '<C-f>' " don't collide with MUcomplete
+" Ultisnips trigger config
+""let g:UltiSnipsExpandTrigger = '<C-f>' " don't collide with MUcomplete
+""let g:UltiSnipsJumpForwardTrigger = '<C-f>' " don't collide with MUcomplete
 "let g:UltiSnipsJumpBackwardTrigger = '<C-b>'
-"" If you want :UltiSnipsEdit to split your window.
+" If you want :UltiSnipsEdit to split your window.
 "let g:UltiSnipsEditSplit="vertical"
 
 " Fugitive
