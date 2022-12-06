@@ -32,8 +32,8 @@
 - vim-fugitive - git directly inside the vim file https://github.com/tpope/vim-fugitive
 - vim-gitgutter - shows file changes for git https://github.com/airblade/vim-gitgutter
 ### File Browsing
-- nerdtree - visual file hierarchy https://github.com/preservim/nerdtree
 - vim-startify - start page and maintains sessions https://github.com/mhinz/vim-startify
+- nnn - file browser with plugin power https://github.com/mcchrish/nnn.vim
 ### Latex & Markdown
 - vimtex - latex in vim https://github.com/lervag/vimtex
 - markdown-preview.nvim - markdown live preview in browser https://github.com/iamcco/markdown-preview.nvim
@@ -58,8 +58,8 @@
 (From the command line)
 - ctags -R -f ./.git/tags .
 
-#### Toggle NerdTree
-- \<F5>
+#### Open nnn
+- \<leader>n
 
 #### Turn on Markdown Preview
 - \<Ctrl-p>

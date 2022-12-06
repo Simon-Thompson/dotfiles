@@ -3,11 +3,11 @@
 rofi_command="rofi -theme $HOME/.config/rofi/power/config.rasi -p "power""
 
 #### Options ###
-log_out="﫼  Logout"
-suspend="  Sleep"
-lock="  Lock"
-reboot="勒  Reboot"
-power_off="襤  Power off"
+log_out=""
+suspend=""
+lock=""
+reboot="勒"
+power_off="襤"
 # Variable passed to rofi
 options="$log_out\n$suspend\n$lock\n$reboot\n$power_off"
 
@@ -26,7 +26,7 @@ case $chosen in
         systemctl suspend
         ;;
     $log_out)
-        pkill xinit
+        i3-msg exit
         ;;
 esac
 

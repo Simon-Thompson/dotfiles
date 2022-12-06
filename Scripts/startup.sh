@@ -2,7 +2,7 @@
 
 # Start apps I like
 # Terminal clock
-i3-msg 'workspace 2; exec "alacritty -e /bin/zsh -c \"source $HOME/.zshrc; tty-clock -c -t; zsh -i\""'
+i3-msg 'workspace 2; exec "alacritty -e /bin/zsh -c \"source $HOME/.zshrc time; zsh -i\""'
 sleep 1
 # Spotify
 if ! pgrep -x "spotify" > /dev/null

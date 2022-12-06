@@ -7,5 +7,5 @@ chosen="$(fd --type file --hidden . "$HOME" | $rofi_command -dmenu -i)"
 if [ ! -z "$chosen" ]
 then
     fileDir=$(dirname "$chosen")
-    alacritty -e /bin/zsh -c "source $HOME/.zshrc; cd '$fileDir'; vim '$chosen'; zsh -i"
+    alacritty -e /bin/zsh -c "cd '$fileDir'; vim '$chosen'; zsh -i; source $HOME/.zshrc"
 fi

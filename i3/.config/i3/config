@@ -238,17 +238,13 @@ for_window [class="discord"] move to workspace $ws4
 for_window [class="Spotify"] move to workspace $ws5
 assign [class="steam*"] 1
 assign [class="Wfica"] 6
-assign [class="Zathura"] 2
+# assign [class="Zathura"] 2
 
 # Run audio switcher once to set the sinks
 exec --no-startup-id /home/vacuum/Scripts/switch-audio.sh
 
 # Start i3-layouts for configurable tiling
 #exec --no-startup-id i3-layouts
-
-# Set screesaver timeout and sleep timeout
-exec s 900
-exec xset dpms 0 0 1200
 
 # Refresh wal themes
 exec --no-startup-id wal -n -R

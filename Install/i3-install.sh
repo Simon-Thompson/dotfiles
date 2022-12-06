@@ -12,7 +12,7 @@ pacman -S -needed --noconfirm feh
 # picom for transparency, blur and rounded corners
 pacman -S -needed --noconfirm picom
 # Polybar for bar stuff
-pacman -S -needed --noconfirm polybar playerctl
+pacman -S -needed --noconfirm polybar playerctl dunst
 yay -S -needed --noconfirm polybar-spotify
 # Flameshot for screenshots
 pacman -S -needed --noconfirm flameshot

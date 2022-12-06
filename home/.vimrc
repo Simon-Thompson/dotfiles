@@ -132,8 +132,8 @@ Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 " File browsing
-Plug 'preservim/nerdtree'
 Plug 'mhinz/vim-startify'
+Plug 'mcchrish/nnn.vim'
 " Latex and Markdown
 Plug 'lervag/vimtex'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
@@ -164,19 +164,6 @@ set timeout ttimeoutlen=50
 
 " Fugitive
 nmap gs :vertical Gstatus<CR>
-
-" Nerdtree config
-map <F5> :NERDTreeToggle<CR>
-let g:NERDTreeWinSize=60
-autocmd bufenter * if (winnr("$") == 1 && exists ("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" Binds to make it behave more like ranger
-let g:NERDTreeDirArrowExpandable = '▶'
-let g:NERDTreeDirArrowCollapsible = '▼'
-let g:NERDTreeMapOpenSplit='<BS>'
-let g:NERDTreeMapOpenVSplit='\'
-let g:NERDTreeMapActivateNode='l'
-" Patch for Nerdtree to work with startify
-let NERDTreeHijackNetrw = 0
 
 " IndentLine config
 set expandtab
