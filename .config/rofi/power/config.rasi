@@ -10,7 +10,7 @@ configuration {
 @theme "/dev/null"
 
 * {
-  bg: black/60%;
+  bg: black/80%;
   bg-alt: white/60%;
   element-bg: black;
   element-selected-bg: white;

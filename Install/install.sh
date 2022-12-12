@@ -27,7 +27,9 @@ pacman -S --needed --noconfirm rofi dmenu papirus-icon-theme
 # Note-taking
 pacman -S --needed --noconfirm obsidian syncthing
 # Screenshot
-pacman -S -needed --noconfirm scrot xclip
+pacman -S --needed --noconfirm scrot xclip
+# Manga
+yay -S --needed --noconfirm mangal-bin
 
 # tmux plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

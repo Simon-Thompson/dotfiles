@@ -67,3 +67,4 @@ alias alarm="~/Scripts/shalarm.sh"
 # nnn shortcut
 alias nnn="nnn -a -e -c"
 alias n3="nnn -a -e -c"
+alias n="nnn -aec"
