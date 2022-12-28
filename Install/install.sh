@@ -30,6 +30,9 @@ pacman -S --needed --noconfirm obsidian syncthing
 pacman -S --needed --noconfirm scrot xclip
 # Manga
 yay -S --needed --noconfirm mangal-bin
+# tty-clock for fun
+yay -S tty-clock-git
+
 
 # tmux plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
