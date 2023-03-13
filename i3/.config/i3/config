@@ -144,17 +144,17 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
-# move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3
-bindsym $mod+Shift+4 move container to workspace number $ws4
-bindsym $mod+Shift+5 move container to workspace number $ws5
-bindsym $mod+Shift+6 move container to workspace number $ws6
-bindsym $mod+Shift+7 move container to workspace number $ws7
-bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
+# move focused container to workspace and focus there
+bindsym $mod+Shift+1 move container to workspace number $ws1; workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2; workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3; workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4; workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5; workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6; workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7; workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8; workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9; workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10; workspace number $ws10
 
 # Set colors from Xresources
 # Change 'color7' and 'color2' to whatever colors you want i3 to use 
@@ -215,20 +215,22 @@ gaps outer 3
 #remove window titles and no border 
 for_window [class="^.*"] border pixel 0
 
-# Start rofi application launcher
+# Launch rofi application launcher
 bindsym $mod+space exec "/home/vacuum/.config/rofi/rofi-wrapper.sh drun"
-# Start rofi window switcher
+# Launch rofi window switcher
 bindsym $alt+Tab exec "/home/vacuum/.config/rofi/rofi-wrapper.sh windows"
-# Start rofi media launcher
+# Launch rofi media launcher
 bindsym $mod+e exec "/home/vacuum/.config/rofi/rofi-wrapper.sh media"
-# Start rofi file opener
+# Launch rofi file opener
 bindsym $mod+d exec --no-startup-id "/home/vacuum/.config/rofi/rofi-wrapper.sh files"
-# Start rofi utilities launcher
+# Launch rofi utilities launcher
 bindsym $mod+u exec --no-startup-id "/home/vacuum/.config/rofi/rofi-wrapper.sh utilities"
+# Launch thunar
+bindsym $mod+g exec --no-startup-id thunar
 
 # Hotkeys
 bindsym --release $mod+Shift+s exec --no-startup-id "/home/vacuum/Scripts/snip.sh"
-bindsym $mod+Shift+a exec --no-startup-id "/home/vacuum/Scripts/switch-audio.sh"
+bindsym $mod+Shift+a exec --no-startup-id "/home/vacuum/Scripts/switch-audio.sh notify"
 bindsym $mod+s exec --no-startup-id "/home/vacuum/Scripts/startup.sh"
 bindsym --release Print exec --nostartup-id "flameshot gui"
 
@@ -238,6 +240,9 @@ for_window [class="discord"] move to workspace $ws4
 for_window [class="Spotify"] move to workspace $ws5
 assign [class="steam*"] 1
 assign [class="Wfica"] 6
+assign [title="Ubisoft"] 6
+assign [class="League*"] 1
+assign [class="league*"] 1
 # assign [class="Zathura"] 2
 
 # Run audio switcher once to set the sinks
@@ -245,6 +250,9 @@ exec --no-startup-id /home/vacuum/Scripts/switch-audio.sh
 
 # Start i3-layouts for configurable tiling
 #exec --no-startup-id i3-layouts
+
+# Start artha for definition popups [Ctrl+At+W]
+exec --no-startup-id artha
 
 # Refresh wal themes
 exec --no-startup-id wal -n -R

@@ -12,11 +12,12 @@ cd ~/
 # Web browser
 pacman -S --needed --noconfirm firefox
 # File manager
-pacman -S --needed --noconfirm pcmanfm p7zip
+pacman -S --needed --noconfirm thunar thunar-archive-plugin p7zip file-roller
 # Shell
 pacman -S --needed --noconfirm zsh alacritty neofetch python tmuxp starship gtop
 # Editor
 pacman -S --needed --noconfirm gvim tmux fzf ripgrep fd geany nnn
+yay -S --needed --noconfirm dragon-drop
 pip install ueberzug
 # PDF viewing
 pacman -S --needed --noconfirm zathura zathura-pdf-mupdf
@@ -30,6 +31,8 @@ pacman -S --needed --noconfirm obsidian syncthing
 pacman -S --needed --noconfirm scrot xclip
 # Manga
 yay -S --needed --noconfirm mangal-bin
+# Remote to windows
+pacman -S --needed --noconfirm remmina freerdp
 
 # tmux plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

@@ -63,6 +63,7 @@ alias time="tty-clock -c -t"
 # Alarm with shalarm script
 alias shalarm="~/Scripts/shalarm.sh"
 alias alarm="~/Scripts/shalarm.sh"
+alias timer="~/Scripts/shalarm.sh"
 
 # nnn shortcut
 alias nnn="nnn -a -e -c"
