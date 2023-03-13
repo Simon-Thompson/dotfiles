@@ -33,6 +33,8 @@ pacman -S --needed --noconfirm scrot xclip
 yay -S --needed --noconfirm mangal-bin
 # Remote to windows
 pacman -S --needed --noconfirm remmina freerdp
+# tty-clock for fun
+yay -S tty-clock-git
 
 # tmux plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

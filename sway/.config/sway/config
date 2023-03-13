@@ -96,12 +96,15 @@ bindsym 	$mod+c 		    kill
 # start your launcher
 bindsym 	$mod+space 	    exec 	$menu
 
+# Entertainment launcher
+#bindsym     $mod+e         exec    $HOME/.config/wofi/media/wofi-media.sh
+
 # dismiss notifications
 bindsym 	Control+space 	exec 	makoctl dismiss
 
 # screenshot with grim and swappy
 bindsym 	print           exec    /home/vacuum/bin/screenshot.sh
-bindsym 	$mod+Shift+s    exec    /home/vacuum/bin/partial-screenshot.sh
+bindsym 	$mod+Shift+s    exec    /home/vacuum/bin/waysnip.sh
 
 # floating window controls (also works for non-floating windows)
 floating_modifier 		$mod 	normal

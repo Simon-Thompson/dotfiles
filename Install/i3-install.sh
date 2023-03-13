@@ -17,9 +17,6 @@ yay -S -needed --noconfirm polybar-spotify
 # Flameshot for screenshots
 pacman -S -needed --noconfirm flameshot
 
-# tty-clock for fun
-yay -S tty-clock-git
-
 # Lutris setup
 pacman -S -needed --noconfirm lutris wine-staging giflib lib32-giflib libpng lib32-libpng libldap lib32-libldap gnutls lib32-gnutls \
 mpg123 lib32-mpg123 openal lib32-openal v4l-utils lib32-v4l-utils libpulse lib32-libpulse libgpg-error \
