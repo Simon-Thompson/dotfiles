@@ -12,7 +12,7 @@ cd ~/
 # Web browser
 pacman -S --needed --noconfirm firefox
 # File manager
-pacman -S --needed --noconfirm pcmanfm p7zip
+pacman -S --needed --noconfirm thunar p7zip
 # Shell
 pacman -S --needed --noconfirm zsh alacritty neofetch python tmuxp starship gtop
 # Editor
@@ -42,7 +42,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 mkdir -p ~/.tmuxp
 mkdir -p ~/Scripts
 find ~/dotfiles/home -type f -exec ln -sf {} ~/ \; -print
-cp -asf ~/dotfiles/.config ~/.config
+cp -asf ~/dotfiles/.config ~/
 ln -sf ~/dotfiles/todo.md ~/todo.md
 
 # Scripts
