@@ -118,7 +118,6 @@ Plug 'tpope/vim-repeat'
 "Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'gcmt/wildfire.vim'
 Plug 'derekwyatt/vim-fswitch'
-Plug 'Yggdroot/indentLine'
 Plug 'preservim/nerdcommenter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'psliwka/vim-smoothie'
@@ -165,17 +164,10 @@ set timeout ttimeoutlen=50
 " Fugitive
 nmap gs :vertical Gstatus<CR>
 
-" IndentLine config
-set expandtab
-set tabstop=4
-set shiftwidth=4
-let g:indentLine_color_term = 239
-let g:indentLine_char = '|'
-
 " Nerdcommenter config
 filetype plugin on
 
-" Goyo config
+" Goyo "focus mode" config
 nnoremap <F1> :Goyo<CR>
 let g:goyo_width = 180
 let g:goyo_height = 85
@@ -228,6 +220,7 @@ nmap <C-p> <Plug>MarkdownPreviewToggle
 " vimtex config
 let g:vimtex_view_method = 'zathura'
 let g:vimtex_compiler_engine = 'lualatex'
+let g:vimtex_syntax_conceal_disable = 1
 noremap <Leader>lf :let &cole=(&cole == 2) ? 0 : 2 <bar> echo 'conceallevel ' . &cole <CR>
 " Disable overfull/underfull \hbox and all package warnings
 let g:vimtex_quickfix_latexlog = {

@@ -16,7 +16,6 @@
 - vim-move - moves selections up and down https://github.com/matze/vim-move
 - vim-endwise - autocompletes structures like if...endif https://github.com/tpope/vim-endwise
 - wildfire - quick select inner text objects https://github.com/gcmt/wildfire.vim
-- indentLine - adds | to visualize indents https://github.com/Yggdroot/indentLine
 - nerdcommenter - commenting everything https://github.com/preservim/nerdcommenter
 - vim-tmux-navigator - seamless jumping between vim panes and tmux splits https://github.com/christoomey/vim-tmux-navigator
 - vim-fswitch - switches between related .h and .ccp files https://github.com/derekwyatt/vim-fswitch
