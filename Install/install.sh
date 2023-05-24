@@ -44,7 +44,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 mkdir -p ~/.tmuxp
 mkdir -p ~/Scripts
 find ~/dotfiles/home -type f -exec ln -sf {} ~/ \; -print
-cp -asf ~/dotfiles/.config ~/.config
+cp -asf ~/dotfiles/.config ~/
 ln -sf ~/dotfiles/todo.md ~/todo.md
 
 # Scripts
