@@ -104,29 +104,30 @@ scrolling:
 font:
   normal:
     #family: monospace
-    family: FantasqueSansMono Nerd Font
+    family: FantasqueSansM Nerd Font
     #family: JetbrainsMono Nerd Font
+    #family: Iosevka Curly
     style: Regular
 
   bold:
     #family: monospace
-    family: FantasqueSansMono Nerd Font
+    family: FantasqueSansM Nerd Font
     #family: JetbrainsMono Nerd Font
     style: Bold
 
   italic:
     #family: monospace
-    family: FantasqueSansMono Nerd Font
+    family: FantasqueSansM Nerd Font
     #family: JetbrainsMono Nerd Font
     style: Italic
 
   bold_italic:
     #family: monospace
-    family: FantasqueSansMono Nerd Font
+    family: FantasqueSansM Nerd Font
     #family: JetbrainsMono Nerd Font
     style: Bold Italic
 
-  size: 14.0
+  size: 16.0
 
 
   # Offset is the extra space around each character. `offset.y` can be thought of

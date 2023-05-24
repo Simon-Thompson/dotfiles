@@ -5,9 +5,9 @@ rofi_command="rofi -theme $HOME/.config/rofi/power/config.rasi -p "power""
 #### Options ###
 log_out=""
 suspend=""
-lock=""
-reboot="勒"
-power_off="襤"
+lock=""
+reboot=" "
+power_off=" "
 # Variable passed to rofi
 options="$log_out\n$suspend\n$lock\n$reboot\n$power_off"
 
