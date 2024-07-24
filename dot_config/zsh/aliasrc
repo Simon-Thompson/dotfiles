@@ -1,0 +1,57 @@
+# aliases
+alias vim="nvim"
+alias todo="nvim ~/todo.md"
+alias fetch="fastfetch"
+
+# ls replacement for tree, and for fsically an ls replacement for tree
+alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
+alias ftree="find | sed 's|[^/]*/|- |g'"
+
+colorflag='--color'
+
+# ask when deleting multiple
+alias rm="rm -I"
+
+# extract files like a sane person
+alias extract="/home/vacuum/Scripts/extract.sh"
+
+# Basic colored ls
+alias ls="ls ${colorflag} --human-readable --group-directories-first -1 --classify"
+
+# Some shorthand launching
+alias tmux='TERM=screen-256color tmux'
+alias t="tmux"
+alias ta="tmux attach-session"
+
+# Config editing binds
+alias cfv="nvim ~/.vimrc"
+alias cfz="nvim ~/.zshrc"
+alias cft="nvim ~/.tmux.conf"
+alias cfa="nvim ~/.config/zsh/aliasrc"
+alias cfalacritty="nvim ~/.config/alacritty/alacritty.toml"
+
+# Reload shell
+alias reload="exec $SHELL -l"
+
+# Sped up cd navigation
+alias cd.="cd .."
+alias cd..="cd .."
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# suffix aliases
+alias -s txt=nvim
+alias -s h=nvim
+alias -s cpp=nvim
+
+# Time in terminal with tty
+alias time="tty-clock -c -t"
+# Alarm with shalarm script
+alias timer="termdown"
+
+# nnn shortcut
+alias nnn="nnn -a -e -c"
+alias n3="nnn -a -e -c"
+alias n="nnn -aec"
