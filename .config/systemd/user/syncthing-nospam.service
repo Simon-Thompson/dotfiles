@@ -1,0 +1,11 @@
+[Unit]
+Description=Syncthing silent
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/bin/zsh /home/vacuum/bin/syncthing.sh
+
+[Install]
+WantedBy=default.target

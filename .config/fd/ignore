@@ -1,0 +1,15 @@
+*.git
+*.ica
+**/Games
+**/.antigen
+**/.cache
+**/.dotnet
+**/.ICAClient
+**/.local
+**/.mozilla
+**/.nuget
+**/.tmux
+**/.vim
+**/.wine
+**/.xlcore
+/home/vacuum/.config

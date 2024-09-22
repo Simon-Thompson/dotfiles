@@ -1,7 +1,13 @@
+# tmuxp aliases
+alias twrite="tmuxp load ~/.tmuxp/write.yaml"
+alias tpotions="tmuxp load ~/.tmuxp/potions.yaml"
 # aliases
-alias vim="nvim"
-alias todo="nvim ~/todo.md"
-alias fetch="fastfetch"
+alias unreal="~/Programs/UnrealEngine-4.24/Engine/Binaries/Linux/UE4Editor"
+alias todo="vim ~/todo.md"
+# .Xresources handling - reload, merge
+alias xm="xrdb -merge ~/.Xresources"
+alias xr="xrdb ~/.Xresources"
+alias xprop="xprop WM_CLASS WM_NAME"
 
 # ls replacement for tree, and for fsically an ls replacement for tree
 alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
@@ -24,11 +30,17 @@ alias t="tmux"
 alias ta="tmux attach-session"
 
 # Config editing binds
-alias cfv="nvim ~/.vimrc"
-alias cfz="nvim ~/.zshrc"
-alias cft="nvim ~/.tmux.conf"
-alias cfa="nvim ~/.config/zsh/aliasrc"
-alias cfalacritty="nvim ~/.config/alacritty/alacritty.toml"
+alias cfv="vim ~/.vimrc"
+alias cfx="vim ~/.Xresources"
+alias cfz="vim ~/.zshrc"
+alias cft="vim ~/.tmux.conf"
+alias cfa="vim ~/.config/zsh/aliasrc"
+alias cfalacritty="vim ~/.config/alacritty/alacritty.yml"
+alias cfawe="vim ~/.config/awesome/rc.lua"
+
+# Lock screen when afk
+alias afk="loginctl lock-session"
+alias afksleep="systemctl suspend"
 
 # Reload shell
 alias reload="exec $SHELL -l"
@@ -42,14 +54,16 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # suffix aliases
-alias -s txt=nvim
-alias -s h=nvim
-alias -s cpp=nvim
+alias -s txt=vim
+alias -s h=vim
+alias -s cpp=vim
 
 # Time in terminal with tty
 alias time="tty-clock -c -t"
 # Alarm with shalarm script
-alias timer="termdown"
+alias shalarm="~/Scripts/shalarm.sh"
+alias alarm="~/Scripts/shalarm.sh"
+alias timer="~/Scripts/shalarm.sh"
 
 # nnn shortcut
 alias nnn="nnn -a -e -c"
