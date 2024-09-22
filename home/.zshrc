@@ -1,70 +1,38 @@
-# Exports
-export VISUAL=usr/bin/nvim
-export EDITOR=/usr/bin/nvim
-export KEYTIMEOUT=2
-export PATH="/home/vacuum/.local/bin:$PATH"
+#!/bin/sh
+[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 
-## Setup vi mode
-bindkey -v
+# history
+HISTFILE=~/.zsh_history
 
-## Plugins
-source "${HOME}/.config/zsh/antigen.zsh"
-antigen use oh-my-zsh
-antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle mafredri/zsh-async
-antigen theme hohmannr/bubblified 
-antigen bundle jump
-antigen apply
+# source
+plug "$HOME/.config/zsh/aliases.zsh"
+plug "$HOME/.config/zsh/exports.zsh"
 
-# Sources
-source "${HOME}/.config/zsh/aliasrc"
+# plugins
+plug "esc/conda-zsh-completion"
+plug "zsh-users/zsh-autosuggestions"
+plug "hlissner/zsh-autopair"
+plug "zap-zsh/supercharge"
+plug "zap-zsh/vim"
+plug "zap-zsh/zap-prompt"
+plug "zap-zsh/fzf"
+plug "zap-zsh/exa"
+plug "zsh-users/zsh-syntax-highlighting"
+plug "zsh-users/zsh-history-substring-search"
 
-## Change cursor with support for inside/outside tmux
-#function _set_cursor() {
-    #if [[ $TMUX = '' ]]; then
-      #echo -ne $1
-    #else
-      #echo -ne "\ePtmux;\e\e$1\e\\"
-    #fi
-#}
+# keybinds
+bindkey '^ ' autosuggest-accept
 
-#function _set_block_cursor() { _set_cursor '\e[2 q' }
-#function _set_beam_cursor() { _set_cursor '\e[6 q' }
+export PATH="$HOME/.local/bin":$PATH
 
-#function zle-keymap-select {
-  #if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
-      #_set_block_cursor
-  #else
-      #_set_beam_cursor
-  #fi
-#}
-#zle -N zle-keymap-select
-## ensure beam cursor when starting new terminal
-#precmd_functions+=(_set_beam_cursor) #
-## ensure insert mode and beam cursor when exiting vim
-#zle-line-init() { zle -K viins; _set_beam_cursor }
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
-# Use vim keys in tab complete menu
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -v '^h' backward-delete-char
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+#
+# Load and initialise completion system
+autoload -Uz compinit
+compinit
 
-# autojump
-[[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
-autoload -U compinit && compinit -u
 
-# Run tmux by default
-#if [ "$TMUX" = "" ]; then 
-#    # Start timer if asked
-#    if [ "$1" = "time" ]; then
-#        TERM=screen-256color tmux new 'tty-clock -c -t';
-#    else
-#        TERM=screen-256color tmux; 
-#    fi
-#fi
-
-eval "$(starship init zsh)"
