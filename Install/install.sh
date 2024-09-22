@@ -16,7 +16,7 @@ pacman -S --needed --noconfirm thunar thunar-archive-plugin p7zip file-roller
 # Shell
 pacman -S --needed --noconfirm zsh alacritty neofetch python tmuxp starship gtop
 # Editor
-pacman -S --needed --noconfirm gvim tmux fzf ripgrep fd geany nnn
+pacman -S --needed --noconfirm gvim neovim tmux fzf ripgrep fd-file geany nnn
 yay -S --needed --noconfirm dragon-drop
 pip install ueberzug
 # PDF viewing
@@ -68,3 +68,4 @@ systemctl enable syncthing@vacuum.service
 systemctl start syncthing@vacuum.service
 
 printf "###\nInstall complete!\nOpen vim to run :PlugInstall\n###\n"
+vim

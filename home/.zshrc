@@ -1,6 +1,6 @@
 # Exports
-export VISUAL=$HOME/Scripts/launchvim.sh
-export EDITOR=/usr/bin/vim
+export VISUAL=usr/bin/nvim
+export EDITOR=/usr/bin/nvim
 export KEYTIMEOUT=2
 export PATH="/home/vacuum/.local/bin:$PATH"
 
@@ -20,7 +20,6 @@ antigen apply
 
 # Sources
 source "${HOME}/.config/zsh/aliasrc"
-source "${HOME}/.config/zsh/functionrc"
 
 ## Change cursor with support for inside/outside tmux
 #function _set_cursor() {
@@ -58,20 +57,14 @@ bindkey -v '^h' backward-delete-char
 [[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
 
-# Import colorscheme from 'wal' asynchronously
-(cat ~/.cache/wal/sequences &)
-
-#neofetch
-#echo "$(cat $HOME/todo.md)"
-
 # Run tmux by default
-if [ "$TMUX" = "" ]; then 
-    # Start timer if asked
-    if [ "$1" = "time" ]; then
-        TERM=screen-256color tmux new 'tty-clock -c -t';
-    else
-        TERM=screen-256color tmux; 
-    fi
-fi
+#if [ "$TMUX" = "" ]; then 
+#    # Start timer if asked
+#    if [ "$1" = "time" ]; then
+#        TERM=screen-256color tmux new 'tty-clock -c -t';
+#    else
+#        TERM=screen-256color tmux; 
+#    fi
+#fi
 
 eval "$(starship init zsh)"

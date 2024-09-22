@@ -1,71 +1,43 @@
-# tmuxp aliases
-alias twrite="tmuxp load ~/.tmuxp/write.yaml"
-alias tpotions="tmuxp load ~/.tmuxp/potions.yaml"
 # aliases
-alias unreal="~/Programs/UnrealEngine-4.24/Engine/Binaries/Linux/UE4Editor"
+alias vim="nvim"
 alias todo="vim ~/todo.md"
-# .Xresources handling - reload, merge
-alias xm="xrdb -merge ~/.Xresources"
-alias xr="xrdb ~/.Xresources"
-alias xprop="xprop WM_CLASS WM_NAME"
+alias fetch="fastfetch"
+alias sound="pulsemixer"
+alias update="sudo dnf update -y"
+alias sendMedia="exec ~/Scripts/sendMediaToServer.sh"
+alias removeMedia="rm -rf -y ~/Downloads/Media/ToSend/*"
 
-# ls replacement for tree, and for fsically an ls replacement for tree
-alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
-alias ftree="find | sed 's|[^/]*/|- |g'"
-
-colorflag='--color'
+# fun stuff
+alias poetrade="exec /home/vacuum/Games/Awakened-PoE-Trade-3.25.102.AppImage"
 
 # ask when deleting multiple
 alias rm="rm -I"
 
-# extract files like a sane person
-alias extract="/home/vacuum/Scripts/extract.sh"
-
 # Basic colored ls
 alias ls="ls ${colorflag} --human-readable --group-directories-first -1 --classify"
 
-# Some shorthand launching
-alias tmux='TERM=screen-256color tmux'
-alias t="tmux"
-alias ta="tmux attach-session"
-
 # Config editing binds
 alias cfv="vim ~/.vimrc"
-alias cfx="vim ~/.Xresources"
 alias cfz="vim ~/.zshrc"
 alias cft="vim ~/.tmux.conf"
 alias cfa="vim ~/.config/zsh/aliasrc"
-alias cfalacritty="vim ~/.config/alacritty/alacritty.yml"
-alias cfawe="vim ~/.config/awesome/rc.lua"
-
-# Lock screen when afk
-alias afk="loginctl lock-session"
-alias afksleep="systemctl suspend"
+alias cfalacritty="vim ~/.config/alacritty/alacritty.toml"
 
 # Reload shell
 alias reload="exec $SHELL -l"
 
-# Sped up cd navigation
-alias cd.="cd .."
-alias cd..="cd .."
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-
 # suffix aliases
-alias -s txt=vim
-alias -s h=vim
-alias -s cpp=vim
+alias -s txt=nvim
+alias -s h=nvim
+alias -s cpp=nvim
 
 # Time in terminal with tty
 alias time="tty-clock -c -t"
-# Alarm with shalarm script
-alias shalarm="~/Scripts/shalarm.sh"
-alias alarm="~/Scripts/shalarm.sh"
-alias timer="~/Scripts/shalarm.sh"
 
 # nnn shortcut
 alias nnn="nnn -a -e -c"
 alias n3="nnn -a -e -c"
 alias n="nnn -aec"
+
+# what's my local ip
+alias localip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"

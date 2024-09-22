@@ -1,0 +1,26 @@
+[shell]
+program="/bin/zsh"
+
+[font]
+size = 20.0
+
+[font.bold]
+family = "Fantasque SansM Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "Fantasque SansM Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "Fantasque SansM Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "Fantasque SansM Nerd Font"
+style = "Regular"
+
+[window]
+opacity=0.85
+decorations="None"
+startup_mode="Maximized"
