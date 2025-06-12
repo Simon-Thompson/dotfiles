@@ -1,0 +1,15 @@
+[[manager.prepend_keymap]]
+on  = "y"
+run = [ '''
+	shell 'for path in "$@"; do echo "file://$path"; done | wl-copy' --confirm
+''', "yank" ]
+
+[[manager.prepend_keymap]]
+on = "s"         
+run = "search --via=fd --args='-H'"
+desc = "Search files by name via fd"
+
+[[manager.prepend_keymap]]
+on = "S"
+run = "search --via=rg --args='--hidden -g '!.var' -g '!.cache' -g '!.local''"
+desc = "Search files by content via ripgrep"
