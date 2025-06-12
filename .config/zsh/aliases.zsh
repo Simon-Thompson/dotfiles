@@ -8,9 +8,6 @@ alias update="arch-update"
 alias timeshift="sudo -E timeshift-gtk"
 alias bottles="flatpak run com.usebottles.bottles"
 
-# dotfiles with gnu stow
-
-
 # Encrypt and decrypt
 alias decrypt_personal="gocryptfs ~/Projects/Personal_encrypted ~/Projects/Personal"
 alias encrypt_personal="fusermount -u ~/Projects/Personal"
