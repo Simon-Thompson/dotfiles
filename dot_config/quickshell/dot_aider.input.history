@@ -1,0 +1,33 @@
+
+# 2025-10-27 00:48:24.422924
++n
+
+# 2025-10-27 00:48:38.460468
++y
+
+# 2025-10-27 00:50:14.264185
++n
+
+# 2025-10-27 00:54:14.705058
++Hi, my quickshell currently fails to run due to a few errors. The first is: Type TopSection unavailable in shell.qml line 81
+
+# 2025-10-27 00:56:42.034301
++/add file .
+
+# 2025-10-27 00:56:45.588058
++n
+
+# 2025-10-27 00:56:50.718285
++/add 
+
+# 2025-10-27 00:57:03.230223
++/copy-context
+
+# 2025-10-27 00:57:44.790529
++/add shell.qml
+
+# 2025-10-27 00:57:50.667344
++Hi, my quickshell currently fails to run due to a few errors. The first is: Type TopSection unavailable in shell.qml line 81
+
+# 2025-10-27 00:59:06.851248
++exit
