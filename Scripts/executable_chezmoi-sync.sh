@@ -46,8 +46,27 @@ fi
 # Step 2: Add targets
 for target in "${TARGETS[@]}"; do
   if [ -e "$target" ]; then
-    echo "Adding $target..."
-    chezmoi add "$target" --force
+    if [ -d "$target" ]; then
+      # Target is a directory, check each file inside
+      find "$target" -type f | while read -r file; do
+        tmpl_path="$(chezmoi source-path "$file")"
+        if [[ "$tmpl_path" == *.tmpl ]]; then
+          echo "Skipping $file (managed by template: $(basename "$tmpl_path"))"
+          continue
+        fi
+        echo "Adding $file..."
+        chezmoi add "$file" --force
+      done
+    else
+      # Target is a file
+      tmpl_path="$(chezmoi source-path "$target")"
+      if [[ "$tmpl_path" == *.tmpl ]]; then
+        echo "Skipping $target (managed by template: $(basename "$tmpl_path"))"
+        continue
+      fi
+      echo "Adding $target..."
+      chezmoi add "$target" --force
+    fi
   else
     echo "Skipping $target (not found)"
   fi
