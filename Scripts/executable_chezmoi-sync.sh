@@ -63,7 +63,7 @@ else
 fi
 
 # Step 4: Push changes (only if there’s a new commit)
-if git log origin/main..HEAD --oneline | grep .; then
+if git log origin/master..HEAD --oneline | grep .; then
   echo "Pushing changes..."
   timeout 120 git push
 else
