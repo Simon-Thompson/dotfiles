@@ -1,6 +1,10 @@
 #!/bin/bash
 set -euo pipefail
 
+# Write a cron job that looks like this:
+# 0 21 */2 * * ~/Scripts/chezmoi-sync.sh
+# To run every 2 days at 9 PM
+
 # List of targets to track with chezmoi
 TARGETS=(
   ~/.zshrc
@@ -35,7 +39,7 @@ cd "$CHEZMOI_SRC"
 for target in "${TARGETS[@]}"; do
   if [ -e "$target" ]; then
     echo "Adding $target..."
-    chezmoi add "$target"
+    chezmoi add "$target" --force
   else
     echo "Skipping $target (not found)"
   fi
@@ -61,7 +65,7 @@ fi
 # Step 4: Push changes (only if there’s a new commit)
 if git log origin/main..HEAD --oneline | grep .; then
   echo "Pushing changes..."
-  git push
+  timeout 120 git push
 else
   echo "No new commits to push."
 fi

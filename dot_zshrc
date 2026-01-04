@@ -1,0 +1,48 @@
+# Prereqs: Starship
+# pacman -S starship
+
+local pluginsDir="$HOME/.zsh"
+local configDir="$HOME/.config/zsh"
+
+# Download Znap (plugins manager), if it's not there yet.
+[[ -r $pluginsDir/znap/znap.zsh ]] ||
+    git clone --depth 1 -- \
+        https://github.com/marlonrichert/zsh-snap.git $pluginsDir/znap
+source $pluginsDir/znap/znap.zsh  # Start Znap
+
+# Plugins
+zstyle ':znap:*' repos-dir $pluginsDir # Set plugins dir
+znap source zsh-users/zsh-autosuggestions
+znap source zdharma-continuum/fast-syntax-highlighting
+znap source zsh-users/zsh-history-substring-search
+znap source zsh-users/zsh-completions
+znap source ajeetdsouza/zoxide
+
+# History settings
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt HIST_IGNORE_DUPS HIST_IGNORE_ALL_DUPS HIST_FIND_NO_DUPS HIST_REDUCE_BLANKS
+
+# Enable Vim keybindings
+bindkey -v
+export KEYTIMEOUT=1
+
+# Keybindings for autosuggestions
+bindkey '^F' autosuggest-accept
+
+# Keybindings for history substring search (Up/Down arrows)
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+# Source configs
+source "$HOME/.config/zsh/aliases.zsh"
+source "$HOME/.config/zsh/exports.zsh"
+source "$HOME/.config/zsh/functions.zsh"
+
+# -------------------------------
+# Final initialization (order matters!)
+# -------------------------------
+autoload -Uz compinit && compinit -C
+eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"

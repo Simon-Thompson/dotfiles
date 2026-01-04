@@ -2,9 +2,11 @@
 # HISTFILE="$XDG_DATA_HOME"/zsh/history
 HISTSIZE=1000000
 SAVEHIST=1000000
-export EDITOR="nvim"
+export VISUAL=nvim
+export EDITOR=nvim
+export SYSTEMD_EDITOR=nvim
 export TERMINAL="kitty"
-# export BROWSER="firefox"
+export BROWSER="firefox"
 export PATH="$HOME/.local/bin":$PATH
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999

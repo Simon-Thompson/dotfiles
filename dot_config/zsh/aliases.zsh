@@ -94,3 +94,8 @@ alias scanFiles="sudo clamscan -R"
 
 # Games
 alias steam_addnonsteamgame="boilr"
+
+# Shorthand for going up directories
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
