@@ -35,7 +35,15 @@ echo "=== ChezMoi Sync started at $(date) ==="
 
 cd "$CHEZMOI_SRC"
 
-# Step 1: Add targets
+# Step 1: Pull remote changes
+echo "Pulling remote changes..."
+if ! git pull --rebase; then
+  echo "Conflict detected during git pull. Exiting."
+  notify-send "ChezMoi Sync" "Conflict detected in dotfiles repo. Manual resolution required."
+  exit 1
+fi
+
+# Step 2: Add targets
 for target in "${TARGETS[@]}"; do
   if [ -e "$target" ]; then
     echo "Adding $target..."
@@ -44,14 +52,6 @@ for target in "${TARGETS[@]}"; do
     echo "Skipping $target (not found)"
   fi
 done
-
-# Step 2: Pull remote changes
-echo "Pulling remote changes..."
-if ! git pull --rebase; then
-  echo "Conflict detected during git pull. Exiting."
-  notify-send "ChezMoi Sync" "Conflict detected in dotfiles repo. Manual resolution required."
-  exit 1
-fi
 
 # Step 3: Commit changes if any
 if ! git diff --quiet; then
