@@ -35,7 +35,7 @@ alias cft="nvim ~/.tmux.conf"
 alias cfa="nvim ~/.config/zsh/aliases.zsh"
 alias cfalacritty="nvim ~/.config/alacritty/alacritty.toml"
 alias cfk="nvim ~/.config/kitty/kitty.conf"
-alias cfh="nvim ~/.config/hypr/hyprland.conf"
+alias cfh="nvim ~/.local/share/chezmoi/dot_config/hypr/hyprland.conf.tmpl -c 'set ft=hyprlang'"
 
 # Reload shell
 alias reload="exec $SHELL -l"
