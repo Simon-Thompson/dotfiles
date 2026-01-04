@@ -1,17 +1,12 @@
+#################################################
+# Shared Hyprland Config (applies to all devices)
+#################################################
+
 # You can split this configuration into multiple files
 # Create your files separately and then link them to this file like this:
 # source = ~/.config/hypr/myColors.conf
 
 ecosystem:no_donation_nag = true
-
-
-################
-### MONITORS ###
-################
-
-monitor = DP-1, 2560x1440, 1920x1080,1  # middle
-monitor = DP-2, highres, 0x1080,1       # left
-monitor = DP-3, 2560x1080, 1920x0,1 # top
 
 ###################
 ### MY PROGRAMS ###
@@ -23,7 +18,6 @@ $menu = killall rofi || rofi -show drun
 $browser = firefox
 $powermenu = exec $HOME/Scripts/power.sh
 
-
 #################
 ### AUTOSTART ###
 #################
@@ -32,7 +26,7 @@ $powermenu = exec $HOME/Scripts/power.sh
 # Or execute your favorite apps at launch like this:
 exec-once = systemctl --user start hyprpolkitagent
 exec-once = dunst
-exec-once = hyprpaper
+exec-once = ~/Scripts/awww-start.sh
 exec-once = hypridle
 exec-once = waybar
 exec-once = udiskie
@@ -40,7 +34,6 @@ exec-once = hyprpm reload -n
 
 # exec-once = nm-applet &
 # exec-once = waybar & hyprpaper & $browser
-
 
 #############################
 ### ENVIRONMENT VARIABLES ###
@@ -204,9 +197,6 @@ bind = $mod, SPACE, exec, $menu
 bind = $mod, B, exec, $browser
 bind = $mod, P, exec, $powermenu
 bind = $mod SHIFT, F, exec, hyprctl dispatch exec "[float;size 1200 800;center] kitty --title 'FZF' -e /home/vacuum/Scripts/zathura-fzf.sh"
-
-# Toggle swaync control center
-bind = $mod SHIFT, N, exec, swaync-client -t -sw
 
 # Switch audio
 bind = $mod SHIFT, A, exec, ~/Scripts/switch-audio.sh notify
@@ -416,6 +406,20 @@ windowrule {
 
 
 #exec-once = $HOME/Scripts/setprimaryXMonitor.sh
+
+# Screen Sharing
+exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+
+{{ if eq .chezmoi.hostname "Delta-Green" }}
+################################
+# Desktop-specific configuration
+################################
+
+### Monitors
+monitor = DP-1, 2560x1440, 1920x1080,1  # middle
+monitor = DP-2, highres, 0x1080,1       # left
+monitor = DP-3, 2560x1080, 1920x0,1 # top
+
 ### Startup apps
 exec-once = [workspace 3 silent]obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland
 exec-once = [workspace 2 silent]$terminal
@@ -424,5 +428,20 @@ exec-once = [workspace 4 silent]vesktop --enable-features=UseOzonePlatform --ozo
 exec-once = [workspace 5 silent]spotify --enable-features=UseOzonePlatform --ozone-platform=wayland
 exec-once = [workspace 6 silent]steam -silent
 
-# Screen Sharing
-exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+
+{{ else if eq .chezmoi.hostname "Delta-Malachite" }}
+##########################################
+# Microsoft Surface-specific configuration
+##########################################
+
+### Monitors
+monitor = eDP-1, 2736x1824, 0x0, 1.5
+
+### Startup apps
+exec-once = [workspace 1 silent]obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland
+exec-once = [workspace 2 silent]$browser
+#exec-once = [workspace 3 silent]vesktop --enable-features=UseOzonePlatform --ozone-platform=wayland
+#exec-once = [workspace 5 silent]spotify --enable-features=UseOzonePlatform --ozone-platform=wayland
+exec-once = [workspace 4 silent]$terminal
+
+{{ end}}
