@@ -62,7 +62,7 @@ for target in "${TARGETS[@]}"; do
       done
     else
       # Target is a file
-      if [ -n "$(chezmoi managed "$file")" ]; then
+      if [ -n "$(chezmoi managed "$target")" ]; then
         tmpl_path="$(chezmoi source-path "$target")"
         if [[ "$tmpl_path" == *.tmpl ]]; then
           echo "Skipping $target (managed by template: $(basename "$tmpl_path"))"
