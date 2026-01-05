@@ -44,5 +44,6 @@ source "$HOME/.config/zsh/functions.zsh"
 # Final initialization (order matters!)
 # -------------------------------
 autoload -Uz compinit && compinit -C
+$HOME/Scripts/pokego-favs.sh
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
