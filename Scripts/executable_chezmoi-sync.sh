@@ -49,10 +49,12 @@ for target in "${TARGETS[@]}"; do
     if [ -d "$target" ]; then
       # Target is a directory, check each file inside
       find "$target" -type f | while read -r file; do
-        tmpl_path="$(chezmoi source-path "$file")"
-        if [[ "$tmpl_path" == *.tmpl ]]; then
-          echo "Skipping $file (managed by template: $(basename "$tmpl_path"))"
-          continue
+        if chezmoi managed "$file"; then
+          tmpl_path="$(chezmoi source-path "$file")"
+          if [[ "$tmpl_path" == *.tmpl ]]; then
+            echo "Skipping $file (managed by template: $(basename "$tmpl_path"))"
+            continue
+          fi
         fi
         echo "Adding $file..."
         chezmoi add "$file" --force
