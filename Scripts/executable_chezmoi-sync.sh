@@ -9,6 +9,7 @@ set -euo pipefail
 TARGETS=(
   ~/.zshrc
   ~/.zshenv
+  ~/.zprofile
   ~/Scripts
   ~/.config/dunst
   ~/.config/fastfetch
@@ -61,10 +62,12 @@ for target in "${TARGETS[@]}"; do
       done
     else
       # Target is a file
-      tmpl_path="$(chezmoi source-path "$target")"
-      if [[ "$tmpl_path" == *.tmpl ]]; then
-        echo "Skipping $target (managed by template: $(basename "$tmpl_path"))"
-        continue
+      if [ -n "$(chezmoi managed "$file")" ]; then
+        tmpl_path="$(chezmoi source-path "$target")"
+        if [[ "$tmpl_path" == *.tmpl ]]; then
+          echo "Skipping $target (managed by template: $(basename "$tmpl_path"))"
+          continue
+        fi
       fi
       echo "Adding $target..."
       chezmoi add "$target" --force
