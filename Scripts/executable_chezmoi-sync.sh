@@ -49,7 +49,7 @@ for target in "${TARGETS[@]}"; do
     if [ -d "$target" ]; then
       # Target is a directory, check each file inside
       find "$target" -type f | while read -r file; do
-        if chezmoi managed "$file"; then
+        if [ -n "$(chezmoi managed "$file")" ]; then
           tmpl_path="$(chezmoi source-path "$file")"
           if [[ "$tmpl_path" == *.tmpl ]]; then
             echo "Skipping $file (managed by template: $(basename "$tmpl_path"))"
